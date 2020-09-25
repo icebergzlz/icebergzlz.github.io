@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>IceBerg</title>
+  <title>设计模式 - IceBerg</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,16 +12,124 @@
   
 
   <link rel="shortcut icon" href="/growd.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="IceBerg">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="设计模式软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。也就是说，它是解决特定问题的一系列套路，是前辈们的代码设计经验的总结，具有一定的普遍性，可以反复使用。其目的是为了提高代码的可重用性、代码的可读性和代码的可靠性。   一共有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式">
+<meta property="og:url" content="http://example.com/2020/09/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="IceBerg">
+<meta property="og:description" content="设计模式软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。也就是说，它是解决特定问题的一系列套路，是前辈们的代码设计经验的总结，具有一定的普遍性，可以反复使用。其目的是为了提高代码的可重用性、代码的可读性和代码的可靠性。   一共有">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%B1%BB.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%8E%A5%E5%8F%A3%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%B1%BB%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%B8%80%E8%88%AC%E5%85%B3%E8%81%94.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%81%9A%E5%90%88%E5%85%B3%E7%B3%BB.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%BB%84%E5%90%88%E5%85%B3%E7%B3%BB.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%B3%9B%E5%8D%8E%E5%85%B3%E7%B3%BB.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AE%9E%E7%8E%B0%E5%85%B3%E7%B3%BB.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/UML%E4%B8%AD%E7%9A%84%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/UML%E4%B8%AD%E7%9A%84%E7%B1%BB%E4%B9%8B%E9%97%B4%E5%85%B3%E7%B3%BB%E5%AE%9E%E4%BE%8B%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/Windows%E4%B8%BB%E9%A2%98%E8%AE%BE%E8%AE%A1.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%87%A0%E7%BB%B4%E9%B8%9F%E4%B8%8D%E6%98%AF%E9%B8%9F.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%87%A0%E7%BB%B4%E9%B8%9F%E6%98%AF%E5%8A%A8%E7%89%A9.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%A1%BE%E5%AE%A2%E8%B4%AD%E7%89%A9%E7%A8%8B%E5%BA%8F.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%B1%BB%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%98%8E%E6%98%9F%E4%B8%8E%E7%BB%8F%E7%BA%AA%E4%BA%BA%E7%9A%84%E5%85%B3%E7%B3%BB%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%94%A8%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B1%BD%E8%BD%A6%E5%88%86%E7%B1%BB%E7%9A%84%E7%B1%BB%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%94%A8%E7%BB%84%E5%90%88%E5%85%B3%E7%B3%BB%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B1%BD%E8%BD%A6%E5%88%86%E7%B1%BB%E7%9A%84%E7%B1%BB%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/美国总统生成器的结构图.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%8C%AA%E5%85%AB%E6%88%92%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%9C%89%E9%99%90%E7%9A%84%E5%A4%9A%E4%BE%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AD%99%E6%82%9F%E7%A9%BA%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A5%96%E7%8A%B6%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%B8%A6%E5%8E%9F%E5%9E%8B%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%94%B5%E5%99%A8%E5%B7%A5%E5%8E%82%E7%9A%84%E4%BA%A7%E5%93%81%E7%AD%89%E7%BA%A7%E4%B8%8E%E4%BA%A7%E5%93%81%E6%97%8F.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%86%9C%E5%9C%BA%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%86%9C%E5%9C%BA%E5%85%BB%E6%AE%96%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.jpg">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AE%A2%E5%8E%85%E8%A3%85%E4%BF%AE%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%9F%B6%E5%85%B3%E2%80%9C%E5%A4%A9%E8%A1%97e%E8%A7%92%E2%80%9D%E5%85%AC%E5%8F%B8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%B1%BB%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AF%B9%E8%B1%A1%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8F%91%E5%8A%A8%E6%9C%BA%E9%80%82%E9%85%8D%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8F%8C%E5%90%91%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A5%B3%E5%A3%AB%E7%9A%AE%E5%8C%85%E9%80%89%E8%B4%AD%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E4%B8%8E%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E8%81%94%E7%94%A8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%B8%B8%E6%88%8F%E8%A7%92%E8%89%B2%E2%80%9C%E8%8E%AB%E8%8E%89%E5%8D%A1%C2%B7%E5%AE%89%E6%96%AF%E5%85%B0%E2%80%9D%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%85%B7%E4%BD%93%E6%9E%84%E4%BB%B6%E7%9A%84%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%85%B7%E4%BD%93%E8%A3%85%E9%A5%B0%E7%9A%84%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8A%9E%E7%90%86%E6%88%BF%E4%BA%A7%E8%AF%81%E8%BF%87%E6%88%B7%E7%9A%84%E7%9B%B8%E5%85%B3%E9%83%A8%E9%97%A8.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A4%96%E8%A7%82%EF%BC%88Facade%EF%BC%89%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A9%BA%E6%BA%90%E7%89%B9%E4%BA%A7%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%BC%95%E5%85%A5%E6%8A%BD%E8%B1%A1%E5%A4%96%E8%A7%82%E7%B1%BB%E7%9A%84%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%BA%94%E5%AD%90%E6%A3%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8D%95%E7%BA%AF%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A4%8D%E5%90%88%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%80%8F%E6%98%8E%E5%BC%8F%E7%9A%84%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AE%89%E5%85%A8%E5%BC%8F%E7%9A%84%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%9B%86%E5%90%88c0%E7%9A%84%E6%A0%91%E7%8A%B6%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%9F%B6%E5%85%B3%E2%80%9C%E5%A4%A9%E8%A1%97e%E8%A7%92%E2%80%9D%E5%BA%97%E8%B4%AD%E7%89%A9%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A4%8D%E6%9D%82%E7%9A%84%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%87%BA%E5%9B%BD%E7%95%99%E5%AD%A6%E6%89%8B%E7%BB%AD%E8%AE%BE%E8%AE%A1%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%90%AB%E9%92%A9%E5%AD%90%E6%96%B9%E6%B3%95%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A4%A7%E9%97%B8%E8%9F%B9%E5%81%9A%E8%8F%9C%E7%AD%96%E7%95%A5%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A4%A7%E9%97%B8%E8%9F%B9%E5%81%9A%E8%8F%9C%E7%BB%93%E6%9E%9C.jpg">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A9%BA%E6%BA%90%E6%97%85%E6%B8%B8%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%AD%96%E7%95%A5%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AE%A2%E6%88%B7%E5%9C%A8%E9%A4%90%E9%A6%86%E5%90%83%E6%97%A9%E9%A4%90%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%BB%84%E5%90%88%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%B4%A3%E4%BB%BB%E9%93%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%AF%B7%E5%81%87%E6%9D%A1%E5%AE%A1%E6%89%B9%E6%A8%A1%E5%9D%97%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%9A%84%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%85%B1%E4%BA%AB%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%BA%BA%E6%B0%91%E5%B8%81%E6%B1%87%E7%8E%87%E5%88%86%E6%9E%90%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AD%A6%E6%A0%A1%E9%93%83%E5%A3%B0%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%AD%A6%E6%A0%A1%E9%93%83%E5%A3%B0%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8E%9F%E6%B2%B9%E6%9C%9F%E8%B4%A7%E7%9A%84%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E4%BE%8B%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%9F%B6%E5%85%B3%E6%88%BF%E5%9C%B0%E4%BA%A7%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E9%9F%B6%E5%85%B3%E6%88%BF%E5%9C%B0%E4%BA%A7%E4%BA%A4%E6%B5%81%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%AE%80%E5%8C%96%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A9%BA%E6%BA%90%E6%97%85%E6%B8%B8%E9%A3%8E%E6%99%AF%E5%9B%BE%E6%B5%8F%E8%A7%88%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%BB%84%E5%90%88%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%AE%BF%E9%97%AE%E8%80%85%EF%BC%88Visitor%EF%BC%89%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%89%BA%E6%9C%AF%E5%85%AC%E5%8F%B8%E4%B8%8E%E9%80%A0%E5%B8%81%E5%85%AC%E5%8F%B8%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%8C%85%E5%90%AB%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%9B%B8%E4%BA%B2%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E5%B8%A6%E5%8E%9F%E5%9E%8B%E7%9A%84%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E2%80%9C%E6%88%91%E6%98%AF%E5%A4%A7%E5%AD%A6%E7%94%9F%E2%80%9D%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%91.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="og:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E2%80%9C%E9%9F%B6%E7%B2%B5%E9%80%9A%E2%80%9D%E5%85%AC%E4%BA%A4%E8%BD%A6%E8%AF%BB%E5%8D%A1%E5%99%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.gif">
+<meta property="article:published_time" content="2020-09-25T01:50:58.000Z">
+<meta property="article:modified_time" content="2020-09-25T01:52:14.103Z">
 <meta property="article:author" content="iceberg">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/bigpaozz/img_md/raw/master/%E7%B1%BB.gif">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1600998762853">
+  <link rel="stylesheet" href="/css/style.css?v=1600998762822">
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -167,27 +275,26 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+          <img data-src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/wallpaper/风景建筑自然/1592929109562.jpg" data-sizes="auto" alt="设计模式" class="lazyload">
+          <h1>设计模式</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月25日</a>
+    <a><i class="nexmoefont icon-areachart"></i>55.1k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 252 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
     
-    <div class="nexmoe-post">
-        <a href="/2020/09/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
-                    <img data-src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/wallpaper/风景建筑自然/1592929109562.jpg" data-sizes="auto" alt="设计模式" class="lazyload">
-                    <h1>设计模式</h1>
-                </div>
-            
-        </a>
+  </div>
 
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月25日</a>
-            <a><i class="nexmoefont icon-areachart"></i>55.1k 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 252 分钟</a>
-        </div>
-
-        <article>
-            
-                <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。也就是说，它是解决特定问题的一系列套路，是前辈们的代码设计经验的总结，具有一定的普遍性，可以反复使用。其目的是为了提高代码的可重用性、代码的可读性和代码的可靠性。 </p>
+  <article>
+    <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>软件设计模式（Software Design Pattern），又称设计模式，是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。它描述了在软件设计过程中的一些不断重复发生的问题，以及该问题的解决方案。也就是说，它是解决特定问题的一系列套路，是前辈们的代码设计经验的总结，具有一定的普遍性，可以反复使用。其目的是为了提高代码的可重用性、代码的可读性和代码的可靠性。 </p>
 <blockquote>
 <p>一共有23中设计模式, 这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。 </p>
 </blockquote>
@@ -6339,1657 +6446,49 @@ public class JepDemo
 
 存款利息：760.0</code></pre>
 
-            
-        </article>
-    </div>
+  </article>
+
+  
     
-    <div class="nexmoe-post">
-        <a href="/2020/09/25/Java%E6%97%B6%E9%97%B4%E7%B1%BB/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
-                    <img data-src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/wallpaper/风景建筑自然/1592929109562.jpg" data-sizes="auto" alt="Java时间类" class="lazyload">
-                    <h1>Java时间类</h1>
-                </div>
-            
-        </a>
-
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月25日</a>
-            <a><i class="nexmoefont icon-areachart"></i>11.2k 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 54 分钟</a>
-        </div>
-
-        <article>
-            
-                <h2 id="1-Date"><a href="#1-Date" class="headerlink" title="1. Date"></a>1. Date</h2><p><img data-sizes="auto" data-src="https://gitee.com/bigpaozz/img_md/raw/master/javadate.png" alt="s" class="lazyload"></p>
-<h3 id="1-1-时区"><a href="#1-1-时区" class="headerlink" title="1.1. 时区"></a>1.1. 时区</h3><p>GMT(Greenwich Mean Time)代表格林尼治标准时间，这个大家都知道。</p>
-<p>而CST却同时可以代表如下 4 个不同的时区：</p>
-<ul>
-<li>Central Standard Time (USA) UT-6:00<ul>
-<li>Central Standard Time (Australia) UT+9:30</li>
-</ul>
-</li>
-<li>China Standard Time UT+8:00<ul>
-<li>Cuba Standard Time UT-4:00</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-2-日期和时间"><a href="#1-2-日期和时间" class="headerlink" title="1.2. 日期和时间"></a>1.2. 日期和时间</h3><p>java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数来实例化 Date 对象。</p>
-<p>第一个构造函数使用当前日期和时间来初始化对象。</p>
-<p><code>Date( )</code></p>
-<p>第二个构造函数接收一个参数，该参数是从1970年1月1日起的毫秒数。</p>
-<p><code>Date(long millisec)</code></p>
-<p>Date对象创建以后，可以调用下面的方法。</p>
-<table>
-<thead>
-<tr>
-<th align="left">序号</th>
-<th align="left">方法和描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1</td>
-<td align="left"><strong>boolean after(Date date)</strong> 若当调用此方法的Date对象在指定日期之后返回true,否则返回false。</td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left"><strong>boolean before(Date date)</strong> 若当调用此方法的Date对象在指定日期之前返回true,否则返回false。</td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left"><strong>Object clone( )</strong> 返回此对象的副本。</td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left"><strong>int compareTo(Date date)</strong> 比较当调用此方法的Date对象和指定日期。两者相等时候返回0。调用对象在指定日期之前则返回负数。调用对象在指定日期之后则返回正数。</td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left"><strong>int compareTo(Object obj)</strong> 若obj是Date类型则操作等同于compareTo(Date) 。否则它抛出ClassCastException。</td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left"><strong>boolean equals(Object date)</strong> 当调用此方法的Date对象和指定日期相等时候返回true,否则返回false。</td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left"><strong>long getTime( )</strong> 返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对象表示的毫秒数。</td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left"><strong>int hashCode( )</strong>  返回此对象的哈希码值。</td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left"><strong>void setTime(long time)</strong>   用自1970年1月1日00:00:00 GMT以后time毫秒数设置时间和日期。</td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left"><strong>String toString( )</strong> 把此 Date 对象转换为以下形式的 String： dow mon dd hh:mm:ss zzz yyyy 其中： dow 是一周中的某一天 (Sun, Mon, Tue, Wed, Thu, Fri, Sat)。</td>
-</tr>
-</tbody></table>
-<pre><code class="java">import java.util.Date;
-
-public class DateDemo &#123;
-   public static void main(String args[]) &#123;
-       // 初始化 Date 对象
-       Date date = new Date();
-
-       // 使用 toString() 函数显示日期时间
-       System.out.println(date.toString());
-   &#125;
-&#125;
-
-// Thu May 12 09:48:46 CST 2018</code></pre>
-<h3 id="1-3-日期比较"><a href="#1-3-日期比较" class="headerlink" title="1.3. 日期比较"></a>1.3. 日期比较</h3><p>Java使用以下三种方法来比较两个日期：</p>
-<ul>
-<li>使用 getTime() 方法获取两个日期（自1970年1月1日经历的毫秒数值），然后比较这两个值。</li>
-<li>使用方法 before()，after() 和 equals()。例如，一个月的12号比18号早，则 new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回true。</li>
-<li>使用 compareTo() 方法，它是由 Comparable 接口定义的，Date 类实现了这个接口。</li>
-</ul>
-<h3 id="1-4-使用-SimpleDateFormat-格式化日期"><a href="#1-4-使用-SimpleDateFormat-格式化日期" class="headerlink" title="1.4. 使用 SimpleDateFormat 格式化日期"></a>1.4. 使用 SimpleDateFormat 格式化日期</h3><p>SimpleDateFormat 是一个以语言环境敏感的方式来格式化和分析日期的类。SimpleDateFormat 允许你选择任何用户自定义日期时间格式来运行。例如：</p>
-<pre><code class="java">import  java.util.*;
-import java.text.*;
-
-public class DateDemo &#123;
-   public static void main(String args[]) &#123;
-
-      Date dNow = new Date( );
-      SimpleDateFormat ft = new SimpleDateFormat (&quot;yyyy-MM-dd hh:mm:ss&quot;);
-
-      System.out.println(&quot;当前时间为: &quot; + ft.format(dNow));
-   &#125;
-&#125;</code></pre>
-<h3 id="1-5-日期和时间的格式化编码"><a href="#1-5-日期和时间的格式化编码" class="headerlink" title="1.5. 日期和时间的格式化编码"></a>1.5. 日期和时间的格式化编码</h3><table>
-<thead>
-<tr>
-<th align="left"><strong>字母</strong></th>
-<th align="left"><strong>描述</strong></th>
-<th align="left"><strong>示例</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">G</td>
-<td align="left">纪元标记</td>
-<td align="left">AD</td>
-</tr>
-<tr>
-<td align="left">y</td>
-<td align="left">四位年份</td>
-<td align="left">2001</td>
-</tr>
-<tr>
-<td align="left">M</td>
-<td align="left">月份</td>
-<td align="left">July or 07</td>
-</tr>
-<tr>
-<td align="left">d</td>
-<td align="left">一个月的日期</td>
-<td align="left">10</td>
-</tr>
-<tr>
-<td align="left">h</td>
-<td align="left">A.M./P.M. (1~12)格式小时</td>
-<td align="left">12</td>
-</tr>
-<tr>
-<td align="left">H</td>
-<td align="left">一天中的小时 (0~23)</td>
-<td align="left">22</td>
-</tr>
-<tr>
-<td align="left">m</td>
-<td align="left">分钟数</td>
-<td align="left">30</td>
-</tr>
-<tr>
-<td align="left">s</td>
-<td align="left">秒数</td>
-<td align="left">55</td>
-</tr>
-<tr>
-<td align="left">S</td>
-<td align="left">毫秒数</td>
-<td align="left">234</td>
-</tr>
-<tr>
-<td align="left">E</td>
-<td align="left">星期几</td>
-<td align="left">Tuesday</td>
-</tr>
-<tr>
-<td align="left">D</td>
-<td align="left">一年中的日子</td>
-<td align="left">360</td>
-</tr>
-<tr>
-<td align="left">F</td>
-<td align="left">一个月中第几周的周几</td>
-<td align="left">2 (second Wed. in July)</td>
-</tr>
-<tr>
-<td align="left">w</td>
-<td align="left">一年中第几周</td>
-<td align="left">40</td>
-</tr>
-<tr>
-<td align="left">W</td>
-<td align="left">一个月中第几周</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left">a</td>
-<td align="left">A.M./P.M. 标记</td>
-<td align="left">PM</td>
-</tr>
-<tr>
-<td align="left">k</td>
-<td align="left">一天中的小时(1~24)</td>
-<td align="left">24</td>
-</tr>
-<tr>
-<td align="left">K</td>
-<td align="left">A.M./P.M. (0~11)格式小时</td>
-<td align="left">10</td>
-</tr>
-<tr>
-<td align="left">z</td>
-<td align="left">时区</td>
-<td align="left">Eastern Standard Time</td>
-</tr>
-<tr>
-<td align="left">‘</td>
-<td align="left">文字定界符</td>
-<td align="left">Delimiter</td>
-</tr>
-<tr>
-<td align="left">“</td>
-<td align="left">单引号</td>
-<td align="left">`</td>
-</tr>
-</tbody></table>
-<h3 id="1-6-使用printf格式化日期"><a href="#1-6-使用printf格式化日期" class="headerlink" title="1.6. 使用printf格式化日期"></a>1.6. 使用printf格式化日期</h3><p>printf 方法可以很轻松地格式化时间和日期。使用两个字母格式，它以 <strong>%t</strong> 开头并且以下面表格中的一个字母结尾。</p>
-<table>
-<thead>
-<tr>
-<th><strong>字符</strong></th>
-<th><strong>描述</strong></th>
-<th><strong>例子</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>c</td>
-<td>完整的日期和时间</td>
-<td>Mon May 04 09:51:52 CDT 2009</td>
-</tr>
-<tr>
-<td>F</td>
-<td>ISO 8601 格式日期</td>
-<td>2004-02-09</td>
-</tr>
-<tr>
-<td>D</td>
-<td>U.S. 格式日期 (月/日/年)</td>
-<td>02/09/2004</td>
-</tr>
-<tr>
-<td>T</td>
-<td>24小时时间</td>
-<td>18:05:19</td>
-</tr>
-<tr>
-<td>r</td>
-<td>12小时时间</td>
-<td>06:05:19 pm</td>
-</tr>
-<tr>
-<td>R</td>
-<td>24小时时间，不包含秒</td>
-<td>18:05</td>
-</tr>
-<tr>
-<td>Y</td>
-<td>4位年份(包含前导0)</td>
-<td>2004</td>
-</tr>
-<tr>
-<td>y</td>
-<td>年份后2位(包含前导0)</td>
-<td>04</td>
-</tr>
-<tr>
-<td>C</td>
-<td>年份前2位(包含前导0)</td>
-<td>20</td>
-</tr>
-<tr>
-<td>B</td>
-<td>月份全称</td>
-<td>February</td>
-</tr>
-<tr>
-<td>b</td>
-<td>月份简称</td>
-<td>Feb</td>
-</tr>
-<tr>
-<td>n</td>
-<td>2位月份(包含前导0)</td>
-<td>02</td>
-</tr>
-<tr>
-<td>d</td>
-<td>2位日子(包含前导0)</td>
-<td>03</td>
-</tr>
-<tr>
-<td>e</td>
-<td>2位日子(不包含前导0)</td>
-<td>9</td>
-</tr>
-<tr>
-<td>A</td>
-<td>星期全称</td>
-<td>Monday</td>
-</tr>
-<tr>
-<td>a</td>
-<td>星期简称</td>
-<td>Mon</td>
-</tr>
-<tr>
-<td>j</td>
-<td>3位年份(包含前导0)</td>
-<td>069</td>
-</tr>
-<tr>
-<td>H</td>
-<td>2位小时(包含前导0), 00 到 23</td>
-<td>18</td>
-</tr>
-<tr>
-<td>k</td>
-<td>2位小时(不包含前导0),  0 到 23</td>
-<td>18</td>
-</tr>
-<tr>
-<td>I</td>
-<td>2位小时(包含前导0), 01 到 12</td>
-<td>06</td>
-</tr>
-<tr>
-<td>l</td>
-<td>2位小时(不包含前导0),  1 到 12</td>
-<td>6</td>
-</tr>
-<tr>
-<td>M</td>
-<td>2位分钟(包含前导0)</td>
-<td>05</td>
-</tr>
-<tr>
-<td>S</td>
-<td>2位秒数(包含前导0)</td>
-<td>19</td>
-</tr>
-<tr>
-<td>L</td>
-<td>3位毫秒(包含前导0)</td>
-<td>047</td>
-</tr>
-<tr>
-<td>N</td>
-<td>9位纳秒(包含前导0)</td>
-<td>047000000</td>
-</tr>
-<tr>
-<td>P</td>
-<td>大写上下午标志</td>
-<td>PM</td>
-</tr>
-<tr>
-<td>p</td>
-<td>小写上下午标志</td>
-<td>pm</td>
-</tr>
-<tr>
-<td>z</td>
-<td>从GMT的RFC 822数字偏移</td>
-<td>-0800</td>
-</tr>
-<tr>
-<td>Z</td>
-<td>时区</td>
-<td>PST</td>
-</tr>
-<tr>
-<td>s</td>
-<td>自 1970-01-01 00:00:00 GMT的秒数</td>
-<td>1078884319</td>
-</tr>
-<tr>
-<td>Q</td>
-<td>自 1970-01-01 00:00:00 GMT的毫妙</td>
-<td>1078884319047</td>
-</tr>
-</tbody></table>
-<pre><code class="java">Date date = new Date();
-System.out.printf(&quot;全部日期和时间信息：%tc%n&quot;,date);</code></pre>
-<p>从上表可以看出，某些个事只给出指定日期的部分信息，如果需要多次对日期操作才能实现一部分操作的目的就太笨拙了，为此可以采用一个格式化字符串之处被格式化的参数索引。索引必须紧跟在%后面，以$终止。 索引从1开始 ，而非0。</p>
-<pre><code class="java">System.out.printf(&quot;%1$s %2$tB %2$te, %2$tY\n&quot;, &quot;Due date:&quot;, new Date());
-//%之后的2表示的是第二个参数，此处是指的是new Date()</code></pre>
-<p>也可以选择使用&lt;标志，它指示前面格式说明中的参数将被再次使用。</p>
-<pre><code class="java">System.out.printf(&quot;%s %tB %&lt;te, %&lt;tY&quot;, &quot;Due date:&quot;, new Date());
-//选择使用&lt;标志，它指示前面格式说明中的参数将被再次使用。</code></pre>
-<h3 id="1-7-解析字符串为时间"><a href="#1-7-解析字符串为时间" class="headerlink" title="1.7. 解析字符串为时间"></a>1.7. 解析字符串为时间</h3><p>SimpleDateFormat 类有一些附加的方法，特别是parse()，它试图按照给定的SimpleDateFormat 对象的格式化存储来解析字符串。例如：</p>
-<pre><code class="java">import java.util.*;
-import java.text.*;
-
-public class DateDemo &#123;
-
-   public static void main(String args[]) &#123;
-      SimpleDateFormat ft = new SimpleDateFormat (&quot;yyyy-MM-dd&quot;); 
-
-      String input = args.length == 0 ? &quot;1818-11-11&quot; : args[0]; 
-
-      System.out.print(input + &quot; Parses as &quot;); 
-
-      Date t; 
-
-      try &#123; 
-          t = ft.parse(input); 
-          System.out.println(t); 
-      &#125; catch (ParseException e) &#123; 
-          System.out.println(&quot;Unparseable using &quot; + ft); 
-      &#125;
-   &#125;
-&#125;</code></pre>
-<h3 id="1-8-Java-休眠-sleep"><a href="#1-8-Java-休眠-sleep" class="headerlink" title="1.8. Java 休眠(sleep)"></a>1.8. Java 休眠(sleep)</h3><p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。</p>
-<p>你可以让程序休眠一毫秒的时间或者到您的计算机的寿命长的任意段时间。例如，下面的程序会休眠3秒：</p>
-<pre><code class="java">import java.util.*;
-
-public class SleepDemo &#123;
-   public static void main(String args[]) &#123;
-      try &#123; 
-         System.out.println(new Date( ) + &quot;\n&quot;); 
-         Thread.sleep(1000*3);   // 休眠3秒
-         System.out.println(new Date( ) + &quot;\n&quot;); 
-      &#125; catch (Exception e) &#123; 
-          System.out.println(&quot;Got an exception!&quot;); 
-      &#125;
-   &#125;
-&#125;</code></pre>
-<h3 id="1-9-时间间隔"><a href="#1-9-时间间隔" class="headerlink" title="1.9. 时间间隔"></a>1.9. 时间间隔</h3><pre><code class="java">   public static void main(String args[]) &#123;
-      try &#123;
-         long start = System.currentTimeMillis( );
-         System.out.println(new Date( ) + &quot;\n&quot;);
-         Thread.sleep(5*60*10);
-         System.out.println(new Date( ) + &quot;\n&quot;);
-         long end = System.currentTimeMillis( );
-         long diff = end - start;
-         System.out.println(&quot;Difference is : &quot; + diff);
-      &#125; catch (Exception e) &#123;
-         System.out.println(&quot;Got an exception!&quot;);
-      &#125;
-   &#125;</code></pre>
-<h2 id="2-Calendar类"><a href="#2-Calendar类" class="headerlink" title="2. Calendar类"></a>2. Calendar类</h2><p>我们现在已经能够格式化并创建一个日期对象了，但是我们如何才能设置和获取日期数据的特定部分呢，比如说小时，日，或者分钟? 我们又如何在日期的这些部分加上或者减去值呢? 答案是使用Calendar 类。</p>
-<p>Calendar类的功能要比Date类强大很多，而且在实现方式上也比Date类要复杂一些。</p>
-<p>Calendar类是一个抽象类，在实际使用时实现特定的子类的对象，创建对象的过程对程序员来说是透明的，只需要使用getInstance方法创建即可。</p>
-<p><strong>创建一个代表系统当前日期的Calendar对象</strong></p>
-<pre><code class="java">Calendar c = Calendar.getInstance();//getInstance方法返回一个Calendar对象（该对象为Calendar的子类对象），其日历字段已由当前日期和时间初始化</code></pre>
-<p><strong>创建一个指定日期的Calendar对象</strong></p>
-<p>使用Calendar类代表特定的时间，需要首先创建一个Calendar的对象，然后再设定该对象中的年月日参数来完成。</p>
-<pre><code class="java">//创建一个代表2009年6月12日的Calendar对象
-Calendar c1 = Calendar.getInstance();
-c1.set(2009, 6 - 1, 12);</code></pre>
-<p><strong>Calendar类对象字段类型</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">常量</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Calendar.YEAR</td>
-<td align="left">年份</td>
-</tr>
-<tr>
-<td align="left">Calendar.MONTH</td>
-<td align="left">月份</td>
-</tr>
-<tr>
-<td align="left">Calendar.DATE</td>
-<td align="left">日期</td>
-</tr>
-<tr>
-<td align="left">Calendar.DAY_OF_MONTH</td>
-<td align="left">日期，和上面的字段意义完全相同</td>
-</tr>
-<tr>
-<td align="left">Calendar.HOUR</td>
-<td align="left">12小时制的小时</td>
-</tr>
-<tr>
-<td align="left">Calendar.HOUR_OF_DAY</td>
-<td align="left">24小时制的小时</td>
-</tr>
-<tr>
-<td align="left">Calendar.MINUTE</td>
-<td align="left">分钟</td>
-</tr>
-<tr>
-<td align="left">Calendar.SECOND</td>
-<td align="left">秒</td>
-</tr>
-<tr>
-<td align="left">Calendar.DAY_OF_WEEK</td>
-<td align="left">星期几</td>
-</tr>
-</tbody></table>
-<h3 id="2-1-Calendar类对象信息的设置"><a href="#2-1-Calendar类对象信息的设置" class="headerlink" title="2.1. Calendar类对象信息的设置"></a>2.1. Calendar类对象信息的设置</h3><p><strong>Set设置</strong></p>
-<p>如：</p>
-<pre><code class="java">Calendar c1 = Calendar.getInstance();</code></pre>
-<p>调用：</p>
-<pre><code class="java">public final void set(int year,int month,int date)
-c1.set(2009, 6 - 1, 12);//把Calendar对象c1的年月日分别设这为：2009、6、12</code></pre>
-<p>利用字段类型设置</p>
-<p>如果只设定某个字段，例如日期的值，则可以使用如下set方法：</p>
-<pre><code class="java">public void set(int field,int value)</code></pre>
-<p>把 c1对象代表的日期设置为10号，其它所有的数值会被重新计算</p>
-<pre><code class="java">c1.set(Calendar.DATE,10);</code></pre>
-<p>把c1对象代表的年份设置为2008年，其他的所有数值会被重新计算</p>
-<pre><code class="java">c1.set(Calendar.YEAR,2008);</code></pre>
-<p>其他字段属性set的意义以此类推</p>
-<p><strong>Add设置</strong></p>
-<pre><code class="java">Calendar c1 = Calendar.getInstance();</code></pre>
-<p>把c1对象的日期加上10，也就是c1也就表示为10天后的日期，其它所有的数值会被重新计算</p>
-<pre><code class="java">c1.add(Calendar.DATE, 10);</code></pre>
-<p>把c1对象的日期减去10，也就是c1也就表示为10天前的日期，其它所有的数值会被重新计算</p>
-<pre><code class="java">c1.add(Calendar.DATE, -10);</code></pre>
-<p>其他字段属性的add的意义以此类推</p>
-<p><strong>Calendar类对象信息的获得</strong></p>
-<pre><code class="java">Calendar c1 = Calendar.getInstance();
-// 获得年份
-int year = c1.get(Calendar.YEAR);
-// 获得月份
-int month = c1.get(Calendar.MONTH) + 1;
-// 获得日期
-int date = c1.get(Calendar.DATE);
-// 获得小时
-int hour = c1.get(Calendar.HOUR_OF_DAY);
-// 获得分钟
-int minute = c1.get(Calendar.MINUTE);
-// 获得秒
-int second = c1.get(Calendar.SECOND);
-// 获得星期几（注意（这个与Date类是不同的）：1代表星期日、2代表星期1、3代表星期二，以此类推）
-int day = c1.get(Calendar.DAY_OF_WEEK);</code></pre>
-<h3 id="2-2-实例"><a href="#2-2-实例" class="headerlink" title="2.2. 实例"></a>2.2. 实例</h3><pre><code class="java">import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
-public class Demo2 &#123;
-
-    public static void main(String[] args) &#123;
-
-        Date date1=new Date(System.currentTimeMillis());
-
-        Calendar calendar=Calendar.getInstance();
-        //获得系统时间
-
-        //格式化时间格式
-        SimpleDateFormat simp01=new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;);
-        SimpleDateFormat simp02=new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
-
-
-
-        System.out.println(&quot;原本的date&quot;+date1);
-        System.out.println(&quot;初始化的date类型&quot;+simp01.format(date1));
-        System.out.println(&quot;初始化的date类型&quot;+simp02.format(date1));
-
-        System.out.println(&quot;Calendar类获得的时间&quot;+calendar.get(Calendar.YEAR)+&quot;:&quot;+(int)((calendar.get(Calendar.MONTH))+1)+&quot;:&quot;+calendar.get(Calendar.DAY_OF_MONTH));
-        //一般月份会少一，所以月份需要+1，每一个get获得的是字符串，所以需要强转为int
-    &#125;
-&#125;
-
-// 原本的dateTue Apr 12 22:05:27 CST 2016
-// 初始化的date类型2016-04-12 10:05:27
-// 初始化的date类型2016-04-12
-// Calendar类获得的时间2016:4:12</code></pre>
-<pre><code class="java">import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.TimeZone;
-
-public class Demo3 &#123;
-    public static void main(String[] args) &#123;
-        Calendar c = Calendar.getInstance(TimeZone.getTimeZone(&quot;GMT+08:00&quot;));    
-        //获取东八区时间
-         int year = c.get(Calendar.YEAR);   
-          //获取年
-         int month = c.get(Calendar.MONTH) + 1;   
-          //获取月份，会少一天。所以+1
-         int day = c.get(Calendar.DAY_OF_MONTH);    
-          //获取当前天数
-         int t = c.get(Calendar.HOUR_OF_DAY);       
-         //获取当前小时
-         int m = c.get(Calendar.MINUTE);          
-         //获取当前分钟
-         int se = c.get(Calendar.SECOND);          
-         //获取当前秒
-         SimpleDateFormat s=new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
-         //格式化时间格式
-         String Now = s.format(c.getTime());  
-         //获得当前日期     format（Obj）：格式化一个对象以生成一个字符串。
-         System.out.println(&quot;当前时间:&quot; + year + &quot;-&quot; + month + &quot;-&quot;+ day + &quot; &quot;+t + &quot;:&quot; + m +&quot;:&quot; + se);
-         System.out.println(&quot;当前日期Now:&quot; + Now);
-    &#125;
-&#125;
-
-// 当前时间:2016-4-12 22:6:18
-// 当前日期Now:2016-04-12 22:06:18</code></pre>
-<h3 id="2-3-GregorianCalendar类"><a href="#2-3-GregorianCalendar类" class="headerlink" title="2.3. GregorianCalendar类"></a>2.3. GregorianCalendar类</h3><p>Calendar类实现了<strong>公历日历</strong>，GregorianCalendar是Calendar类的一个具体实现。</p>
-<p>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这是代表公历定义的两个时代。</p>
-<p>下面列出GregorianCalendar对象的几个构造方法：</p>
-<h4 id="2-3-1-构造方法"><a href="#2-3-1-构造方法" class="headerlink" title="2.3.1. 构造方法"></a>2.3.1. 构造方法</h4><table>
-<thead>
-<tr>
-<th><strong>序号</strong></th>
-<th><strong>构造函数和说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td><strong>GregorianCalendar()</strong>  在具有默认语言环境的默认时区内使用当前时间构造一个默认的 GregorianCalendar。</td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong>GregorianCalendar(int year, int month, int date)</strong>  在具有默认语言环境的默认时区内构造一个带有给定日期设置的 GregorianCalendar</td>
-</tr>
-<tr>
-<td>3</td>
-<td><strong>GregorianCalendar(int year, int month, int date, int hour, int minute)</strong>  为具有默认语言环境的默认时区构造一个具有给定日期和时间设置的 GregorianCalendar。</td>
-</tr>
-<tr>
-<td>4</td>
-<td><strong>GregorianCalendar(int year, int month, int date, int hour, int minute, int second)</strong>    为具有默认语言环境的默认时区构造一个具有给定日期和时间设置的 GregorianCalendar。</td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>GregorianCalendar(Locale aLocale)</strong>  在具有给定语言环境的默认时区内构造一个基于当前时间的 GregorianCalendar。</td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>GregorianCalendar(TimeZone zone)</strong>  在具有默认语言环境的给定时区内构造一个基于当前时间的 GregorianCalendar。</td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>GregorianCalendar(TimeZone zone, Locale aLocale)</strong>   在具有给定语言环境的给定时区内构造一个基于当前时间的 GregorianCalendar。</td>
-</tr>
-</tbody></table>
-<h4 id="2-3-2-方法"><a href="#2-3-2-方法" class="headerlink" title="2.3.2. 方法"></a>2.3.2. 方法</h4><table>
-<thead>
-<tr>
-<th><strong>序号</strong></th>
-<th><strong>方法和说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td><strong>void add(int field, int amount)</strong>  根据日历规则，将指定的（有符号的）时间量添加到给定的日历字段中。</td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong>protected void computeFields()</strong>  转换UTC毫秒值为时间域值</td>
-</tr>
-<tr>
-<td>3</td>
-<td><strong>protected void computeTime()</strong>  覆盖Calendar ，转换时间域值为UTC毫秒值</td>
-</tr>
-<tr>
-<td>4</td>
-<td><strong>boolean equals(Object obj)</strong>  比较此 GregorianCalendar 与指定的 Object。</td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>int get(int field)</strong>  获取指定字段的时间值</td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>int getActualMaximum(int field)</strong>  返回当前日期，给定字段的最大值</td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>int getActualMinimum(int field)</strong>  返回当前日期，给定字段的最小值</td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong>int getGreatestMinimum(int field)</strong>   返回此 GregorianCalendar 实例给定日历字段的最高的最小值。</td>
-</tr>
-<tr>
-<td>9</td>
-<td><strong>Date getGregorianChange()</strong>  获得格里高利历的更改日期。</td>
-</tr>
-<tr>
-<td>10</td>
-<td><strong>int getLeastMaximum(int field)</strong>  返回此 GregorianCalendar 实例给定日历字段的最低的最大值</td>
-</tr>
-<tr>
-<td>11</td>
-<td><strong>int getMaximum(int field)</strong>  返回此 GregorianCalendar 实例的给定日历字段的最大值。</td>
-</tr>
-<tr>
-<td>12</td>
-<td><strong>Date getTime()</strong> 获取日历当前时间。</td>
-</tr>
-<tr>
-<td>13</td>
-<td><strong>long getTimeInMillis()</strong>  获取用长整型表示的日历的当前时间</td>
-</tr>
-<tr>
-<td>14</td>
-<td><strong>TimeZone getTimeZone()</strong>  获取时区。</td>
-</tr>
-<tr>
-<td>15</td>
-<td><strong>int getMinimum(int field)</strong>  返回给定字段的最小值。</td>
-</tr>
-<tr>
-<td>16</td>
-<td><strong>int hashCode()</strong>  重写hashCode.</td>
-</tr>
-<tr>
-<td>17</td>
-<td><strong>boolean isLeapYear(int year)</strong> 确定给定的年份是否为闰年。</td>
-</tr>
-<tr>
-<td>18</td>
-<td><strong>void roll(int field, boolean up)</strong>  在给定的时间字段上添加或减去（上/下）单个时间单元，不更改更大的字段。</td>
-</tr>
-<tr>
-<td>19</td>
-<td><strong>void set(int field, int value)</strong>  用给定的值设置时间字段。</td>
-</tr>
-<tr>
-<td>20</td>
-<td><strong>void set(int year, int month, int date)</strong>  设置年、月、日的值。</td>
-</tr>
-<tr>
-<td>21</td>
-<td><strong>void set(int year, int month, int date, int hour, int minute)</strong>  设置年、月、日、小时、分钟的值。</td>
-</tr>
-<tr>
-<td>22</td>
-<td><strong>void set(int year, int month, int date, int hour, int minute, int second)</strong>  设置年、月、日、小时、分钟、秒的值。</td>
-</tr>
-<tr>
-<td>23</td>
-<td><strong>void setGregorianChange(Date date)</strong>  设置 GregorianCalendar 的更改日期。</td>
-</tr>
-<tr>
-<td>24</td>
-<td><strong>void setTime(Date date)</strong>  用给定的日期设置Calendar的当前时间。</td>
-</tr>
-<tr>
-<td>25</td>
-<td><strong>void setTimeInMillis(long millis)</strong>  用给定的long型毫秒数设置Calendar的当前时间。</td>
-</tr>
-<tr>
-<td>26</td>
-<td><strong>void setTimeZone(TimeZone value)</strong>  用给定时区值设置当前时区。</td>
-</tr>
-<tr>
-<td>27</td>
-<td><strong>String toString()</strong>  返回代表日历的字符串。</td>
-</tr>
-</tbody></table>
-<pre><code class="java">import java.util.*;
-
-public class GregorianCalendarDemo &#123;
-
-   public static void main(String args[]) &#123;
-      String months[] = &#123;
-      &quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;,
-      &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;,
-      &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;&#125;;
-
-      int year;
-      // 初始化 Gregorian 日历
-      // 使用当前时间和日期
-      // 默认为本地时间和时区
-      GregorianCalendar gcalendar = new GregorianCalendar();
-      // 显示当前时间和日期的信息
-      System.out.print(&quot;Date: &quot;);
-      System.out.print(months[gcalendar.get(Calendar.MONTH)]);
-      System.out.print(&quot; &quot; + gcalendar.get(Calendar.DATE) + &quot; &quot;);
-      System.out.println(year = gcalendar.get(Calendar.YEAR));
-      System.out.print(&quot;Time: &quot;);
-      System.out.print(gcalendar.get(Calendar.HOUR) + &quot;:&quot;);
-      System.out.print(gcalendar.get(Calendar.MINUTE) + &quot;:&quot;);
-      System.out.println(gcalendar.get(Calendar.SECOND));
-
-      // 测试当前年份是否为闰年
-      if(gcalendar.isLeapYear(year)) &#123;
-         System.out.println(&quot;当前年份是闰年&quot;);
-      &#125;
-      else &#123;
-         System.out.println(&quot;当前年份不是闰年&quot;);
-      &#125;
-   &#125;
-&#125;
-
-// Date: Apr 22 2009
-// Time: 11:25:27
-// 当前年份不是闰年</code></pre>
-<h2 id="3-老版本使用的问题"><a href="#3-老版本使用的问题" class="headerlink" title="3. 老版本使用的问题"></a>3. 老版本使用的问题</h2><h3 id="3-1-老版本API计算困难问题"><a href="#3-1-老版本API计算困难问题" class="headerlink" title="3.1. 老版本API计算困难问题"></a>3.1. 老版本API计算困难问题</h3><p>JAVA面世之初，标准库就引入了两种用于处理日期和时间的类，它们是java.util.Datejava.util.Calendar。而前者堪称类糟糕的设计典范，浏览API可以发现，从Java1.1开始，Date 类中的所有方法就已经被弃用，Java1.1推荐采用Calendar类处理日期和时间，但是这个类同样存在不少问题。</p>
-<p><strong>对于日期的计算困难问题</strong></p>
-<p>毫秒值与日期直接转换比较繁琐，其次通过毫秒值来计算时间的差额步骤较多</p>
-<pre><code class="java">import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
-import java.util.Date;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 22:12
- * 计算某人出生到当前使劲已经过了多少天？
- */
-public class CalculateDemo &#123;
-    public static void main(String[] args) &#123;
-        Date date = new Date();
-        long time = date.getTime();
-        System.out.println(time);
-
-        Calendar instance = Calendar.getInstance();
-        instance.set(1997,5,1);
-
-        Date time1 = instance.getTime();
-        System.out.println(time1);
-        long time2 = time1.getTime();
-        System.out.println(time2);
-
-        long l = (time-time2)/1000/60/60/24/365;
-        System.out.println(l);
-
-        long l1 = ChronoUnit.DAYS.between(LocalDate.of(1997, 5, 1),
-                LocalDate.now());
-        System.out.println(l1/365);
-    &#125;
-&#125;</code></pre>
-<h3 id="3-2-老版本API线程不安全问题"><a href="#3-2-老版本API线程不安全问题" class="headerlink" title="3.2. 老版本API线程不安全问题"></a>3.2. 老版本API线程不安全问题</h3><p>SimpleDateFormat类是线程不安全的，在多线程的情况下，全局共享一个SimpleDateFormat类中的Calendar对象有可能会出现异常。</p>
-<pre><code class="java">import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 12:46
- */
-public class SimpleDateFormatDemo &#123;
-    final static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
-
-    public static void main(String[] args) &#123;
-        for (int i = 0; i &lt; 10; i++) &#123;
-            new Thread(()-&gt;&#123;
-                try &#123;
-                    synchronized (SIMPLE_DATE_FORMAT)&#123;
-                        Date date = SIMPLE_DATE_FORMAT.parse(&quot;2018-12-12 12:12:12&quot;);
-                        System.out.println(date);
-                    &#125;
-                &#125; catch (ParseException e) &#123;
-                    e.printStackTrace();
-                &#125;
-            &#125;).start();
-        &#125;
-    &#125;
-&#125;</code></pre>
-<p>另外一个问题就是在java.util.Date和java.util.Calendar类之前，枚举类型（ENUM）还没有出现，所以在<strong>字段中使用整数常量导致整数常量都是可变的，而不是线程安全的。</strong>           </p>
-<p>为了处理 实际开发中遇到的问题，标准库随后<strong>引入了java.sql.Date作为java.util.Date的子类，但是还是没能彻底解决问题。</strong>最终JavaSE 8中引入了java.time包，这种全新的包从根本上解决了长久以来存在的诸多弊端，java.time包基于Joda-Time库构建，是一种免费的开源解决方案，实际上在Java 8没有出现之前，公司中已经广泛使用Joda-Time来解决Java中的日期与时间问题，Joda-Time的设计团队也参与了java.time包的开发。</p>
-<h3 id="3-3-老版本API使用规范问题"><a href="#3-3-老版本API使用规范问题" class="headerlink" title="3.3. 老版本API使用规范问题"></a>3.3. 老版本API使用规范问题</h3><pre><code class="java">import java.util.Calendar;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 13:08
- */
-public class CalendarUnsafeDemo &#123;
-    public static void main(String[] args) &#123;
-        //初始化Calendar对象 -&gt; getInstance（）方法
-        Calendar calendar = Calendar.getInstance();
-        //通过set方法设置年/月/日参数 -&gt; 开发规范：不允许使用没有定义的魔法数字
-        //第二个参数，月份，默认是从0开始的，如果写要设置8月就要写8-1或7，此处使用枚举类
-        calendar.set(2008,Calendar.AUGUS,8);
-    &#125;
-&#125;</code></pre>
-<h2 id="4-Java8-Time"><a href="#4-Java8-Time" class="headerlink" title="4. Java8 Time"></a>4. Java8 Time</h2><h3 id="4-1-常用类的概述和功能介绍"><a href="#4-1-常用类的概述和功能介绍" class="headerlink" title="4.1. 常用类的概述和功能介绍"></a>4.1. 常用类的概述和功能介绍</h3><p><strong>Instant类</strong></p>
-<p>  Instant类对时间轴上的单一瞬时点建模，可以用于记录应用程序中的事件时间戳，之后学习的类型转换中，均可以使用Instant类作为中间类完成转换。</p>
-<p><strong>Duration类</strong></p>
-<p>  Duration类表示秒或纳秒时间间隔，适合处理较短的时间，需要更高的精确性。</p>
-<p><strong>Period类</strong></p>
-<p>  Period类表示一段时间的年、月、日。</p>
-<p><strong>LocalDate类</strong></p>
-<p>  LocalDate是一个不可变的日期时间对象，表示日期，通常被视为年月日。</p>
-<p><strong>LocalTime类</strong></p>
-<p>  LocalTime是一个不可变的日期时间对象，代表一个时间，通常被看作是小时-秒，时间表示为纳秒精度。</p>
-<p><strong>LocalDateTime类</strong></p>
-<p>  LocalDateTime类是一个不可变的日期时间对象，代表日期时间，通常被视为年-月-日=时-分-秒。</p>
-<p><strong>ZonedDateTime类</strong></p>
-<p>  ZonedDateTime是具有时区的日期时间的不可变表示，此类存储所有日期和时间字段，精度为纳秒，时区为区域偏移量，用于处理模糊的本地日期时间。</p>
-<p><strong>now方法在日期/时间类的使用</strong></p>
-<p><strong>Date-Time API中的所有类均生成不可变实例，它们是线程安全的，并且这些类不提供公共构造函数，也就是说没办法通过new的方式直接创建，需要采用工厂方法加以实例化。</strong></p>
-<h3 id="4-2-now方法"><a href="#4-2-now方法" class="headerlink" title="4.2. now方法"></a>4.2. now方法</h3><p> <strong>now方法可以根据当前日期或时间创建实例。</strong></p>
-<pre><code class="java">import java.time.*;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 14:26
- */
-public class Java8TimeClassMethodDemo1 &#123;
-    public static void main(String[] args) &#123;
-        //使用now方法创建Instant的实例
-        Instant instantNow = Instant.now();
-        System.out.println(&quot;Instant&quot;+&quot;:&quot;+instantNow);
-
-        //使用now方法创建LocalDate的实例
-        LocalDate localDateNow = LocalDate.now();
-        System.out.println(&quot;LocalDate&quot;+&quot;:&quot;+localDateNow);
-
-        //使用now方法创建LocalTime的实例
-        LocalTime localTimeNow = LocalTime.now();
-        System.out.println(&quot;LocalTime&quot;+&quot;:&quot;+localTimeNow);
-
-        //使用now方法创建LocalDateTime的实例
-        LocalDateTime localDateTimeNow = LocalDateTime.now();
-        System.out.println(&quot;LocalDateTime&quot;+&quot;:&quot;+localDateTimeNow);
-
-        //使用now方法创建ZonedDateTime的实例
-        ZonedDateTime zonedDateTimeNow = ZonedDateTime.now();
-        System.out.println(&quot;ZonedDateTime&quot;+&quot;:&quot;+zonedDateTimeNow);
-    &#125;
-&#125;
-
-//Instant:2018-08-10T05:20:56.855Z
-//LocalDate:2018-08-10
-//LocalTime:13:20:56.956
-//LocalDateTime:2018-08-10T13:20:56.957
-//ZonedDateTime:2018-08-10T13:20:56.957+08:00[Asia/Shanghai]</code></pre>
-<p><strong>不仅仅是以上提供的及各类可以使用now方法，Java8的Time包种还提供了其它几个类可以更精准的获取某些信息。</strong></p>
-<blockquote>
-<p>Year类（表示年）</p>
-<p>YearMonth类（表示年月）</p>
-<p>MonthDay类（表示月日）</p>
-</blockquote>
-<pre><code class="java">import java.time.MonthDay;
-import java.time.Year;
-import java.time.YearMonth;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:28
- */
-public class Java8TimeClassMethodDemo2 &#123;
-    public static void main(String[] args) &#123;
-        //使用now方法创建Year的实例
-        Year year = Year.now();
-        System.out.println(&quot;Year&quot;+&quot;:&quot;+year);
-
-        //使用now方法创建YearMonth的实例
-        YearMonth yearMonth = YearMonth.now();
-        System.out.println(&quot;YearMonth&quot;+&quot;:&quot;+yearMonth);
-
-        //使用now方法创建MonthDay的实例
-        MonthDay monthDay = MonthDay.now();
-        System.out.println(&quot;MonthDay&quot;+&quot;:&quot;+monthDay);
-    &#125;
-&#125;
-
-//Year:2018
-//YearMonth:2018-06
-//MonthDay:--06-25</code></pre>
-<h3 id="4-3-of-方法"><a href="#4-3-of-方法" class="headerlink" title="4.3. of()方法"></a>4.3. of()方法</h3><p><strong>of方法可以根据给定的参数生成对应的日期/时间对象，基本上每个基本类都有of方法用于生成的对应的对象，而且重载形式对边，可以根据不同的参数生成对应的数据。</strong></p>
-<pre><code class="java">import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 13:25
- */
-public class Java8TimeClassMethodDemo3 &#123;
-    public static void main(String[] args) &#123;
-        LocalDate localDate = LocalDate.of(2018, Month.AUGUST, 8);
-        System.out.println(&quot;LocalDate:&quot;+localDate);
-
-        LocalTime localTime = LocalTime.of(20, 0);
-        System.out.println(&quot;LocalTime:&quot;+localTime);
-
-        LocalDateTime localDateTime = LocalDateTime.of(2018, Month.AUGUST, 8, 8, 0);
-        System.out.println(&quot;LocalDateTime:&quot;+localDateTime);
-
-        LocalDateTime localDateTime1 = LocalDateTime.of(localDate, localTime);
-        System.out.println(&quot;LocalDateTime1:&quot;+localDateTime1);
-    &#125;
-&#125;
-
-//LocalDate:2018-08-08
-//LocalTime:20:00
-//LocalDateTime:2018-08-08T08:00
-//LocalDateTime1:2018-08-08T20:00</code></pre>
-<h3 id="4-4-时区"><a href="#4-4-时区" class="headerlink" title="4.4. 时区"></a>4.4. 时区</h3><h4 id="4-4-1-获取时区"><a href="#4-4-1-获取时区" class="headerlink" title="4.4.1. 获取时区"></a>4.4.1. 获取时区</h4><p>在学习ZonedDateTime的时候，发现这个对象里面封装的不仅有时间日期，并且还有偏移量+时区，那么时区如何在Java中获取呢？通过提供的一个类ZonedId的getAvailableZoneIds方法可以获取到一个Set集合，集合中封装了600个时区。</p>
-<pre><code class="java">import java.time.ZoneId;
-import java.util.Set;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:36
- */
-public class Java8TimeClassMethodDemo4 &#123;
-    public static void main(String[] args) &#123;
-        //获取所有的时区信息
-        Set&lt;String&gt; availableZoneIds = ZoneId.getAvailableZoneIds();
-        for (String availableZoneId : availableZoneIds) &#123;
-            System.out.println(availableZoneId);
-        &#125;
-
-        //获取当前系统默认的时区信息
-        ZoneId systemDefault = ZoneId.systemDefault();
-        System.out.println(&quot;系统默认时区：&quot;+systemDefault);
-    &#125;
-&#125;
-
-//Asia/Aden
-//America/Cuiaba
-//。。。。。。
-//US/Pacific
-//Europe/Monaco
-//系统默认时区：Asia/Shanghai</code></pre>
-<h4 id="4-4-2-添加时区信息与获取其它时区时间"><a href="#4-4-2-添加时区信息与获取其它时区时间" class="headerlink" title="4.4.2. 添加时区信息与获取其它时区时间"></a>4.4.2. 添加时区信息与获取其它时区时间</h4><p>我们可以通过给 LocalDateTimem添加时区信息来查看到不同时区的时间，比如说 LocalDateTime中当前封装的是上海时间，那么想知道此时此刻，纽约的时间是多少，就可以将纽约的时区Id添加进去，就可以查看到了，方式如下：</p>
-<ul>
-<li><p>封装时间 LocalDateTime 并添加时区信息。</p>
-</li>
-<li><p>更改时区信息查看对应时间。</p>
-</li>
-</ul>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:38
- */
-public class Java8TimeClassMethodDemo5 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime localDateTime = LocalDateTime.of(2018, Month.JUNE, 24, 17, 40, 26);
-        ZonedDateTime zonedDateTime = localDateTime.atZone(ZoneId.of(&quot;Asia/Shanghai&quot;));
-        System.out.println(&quot;上海当前的时间：&quot;+zonedDateTime);
-
-        ZonedDateTime hongkongzonedDateTime = zonedDateTime.withZoneSameInstant(ZoneId.of(&quot;Asia/Tokyo&quot;));
-        System.out.println(&quot;在同一时刻，东京的时间是：&quot;+hongkongzonedDateTime);
-    &#125;
-&#125;
-
-//上海当前的时间：2018-08-10T17:40:26+08:00[Asia/Shanghai]
-//在同一时刻，东京的时间是：2018-08-10T18:40:26+09:00[Asia/Tokyo]</code></pre>
-<h3 id="4-5-Month枚举类"><a href="#4-5-Month枚举类" class="headerlink" title="4.5. Month枚举类"></a>4.5. Month枚举类</h3><p>java.time包中引用了Month的枚举类，Month中包含标准日历中的12个月份的常量（从JANUARY到DECEMEBER）也提供了一些方便的方法供我们使用。</p>
-<blockquote>
-<p>推荐在初始化LocalDate和LocalDateTime对象的时候，月份的参数使用枚举的方式传入，这样更简单易懂而且不易出错，因为如果是老的思维，Calendar传入0的话，那么会出现异常。</p>
-</blockquote>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.Month;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:50
- */
-public class Java8TimeClassMethodDemo6 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime localDateTime = LocalDateTime.of(2018, Month.JUNE, 6, 11, 11, 11);
-        System.out.println(localDateTime);
-        Month month = Month.of(12);
-        System.out.println(month);
-    &#125;
-&#125;
-
-//2018-06-06T11:11:11
-//DECEMBER</code></pre>
-<h3 id="4-6-plus-方法"><a href="#4-6-plus-方法" class="headerlink" title="4.6. plus()方法"></a>4.6. plus()方法</h3><h4 id="4-6-1-plus方法在LocalDate中的使用"><a href="#4-6-1-plus方法在LocalDate中的使用" class="headerlink" title="4.6.1. plus方法在LocalDate中的使用"></a>4.6.1. plus方法在LocalDate中的使用</h4><p>想要<strong>修改某个日期/时间对象</strong>的现有实例时，我们可以使用 <strong>plus</strong>和 <strong>minus</strong>方法来完成操作。</p>
-<p>Java8中日期时间相关的API中的所有实例都是不可改变的，一旦创建LocalDate，LocalTime，LocalDateTime就无法修改他们（类似于String），这对于线程安全时非常有利的。</p>
-<p>plus方法在LocalDate与LocalTime中的使用</p>
-<ul>
-<li>LocalDate中定义了多种对日期进行增减操作的方法。</li>
-<li>LocalDate plusDay(long days) 增加天数</li>
-<li>LocalDate plusWeeks(long weeks) 增加周数</li>
-<li>LocallDate plusMonths(long months) 增加月数  </li>
-<li>LocalDate plusYears(long years) 增加年数</li>
-</ul>
-<pre><code class="java">import java.time.LocalDate;
-import java.time.Month;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 16:10
- */
-public class Java8TimeClassMethodPlusDemo1 &#123;
-    public static void main(String[] args) &#123;
-        LocalDate localDate = LocalDate.of(2018, Month.FEBRUARY, 13);
-        System.out.println(&quot;当前的时间是：&quot;+localDate);
-
-        LocalDate localDate1 = localDate.plusDays(4);
-        System.out.println(&quot;当前四天后的时间是：&quot;+localDate1);
-
-        LocalDate localDate2 = localDate.plusWeeks(3);
-        System.out.println(&quot;当前三周后的时间是：&quot;+localDate2);
-
-        LocalDate localDate3 = localDate.plusMonths(5);
-        System.out.println(&quot;当前五个月后的时间是：&quot;+localDate3);
-
-        LocalDate localDate4 = localDate.plusYears(2);
-        System.out.println(&quot;当前两年后的时间是：&quot;+localDate4);
-    &#125;
-&#125;
-
-//当前的时间是：2018-02-13
-//当前四天后的时间是：2018-02-17
-//当前三周后的时间是：2018-03-05
-//当前五个月后的时间是：2018-07-13
-//当前两年后的时间是：2022-02-13</code></pre>
-<blockquote>
-<p>minus方法与以上类似。</p>
-</blockquote>
-<h4 id="4-6-2-plus方法在LocalTime中的使用"><a href="#4-6-2-plus方法在LocalTime中的使用" class="headerlink" title="4.6.2. plus方法在LocalTime中的使用"></a>4.6.2. plus方法在LocalTime中的使用</h4><p>LocalTime中定义了多种对事件进行增减操作的方法</p>
-<ul>
-<li>LocalTime plusNanos(long nanos) 增加纳秒</li>
-<li>LocalTime plusSeconds(long seconds) 增加秒</li>
-<li>LocalTime plusMinutes(long minutes) 增加分钟</li>
-<li>LocalTime plusHours(long hours) 增加小时</li>
-</ul>
-<pre><code class="java">import java.time.LocalTime;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 16:17
- */
-public class Java8TimeClassMethodPlusDemo2 &#123;
-    public static void main(String[] args) &#123;
-        LocalTime localTime = LocalTime.of(8, 14, 39, 218);
-        System.out.println(&quot;当前时间是：&quot;+localTime);
-
-        LocalTime localTime1 = localTime.plusNanos(500);
-        System.out.println(&quot;当前时间5纳秒后是：&quot;+localTime1);
-
-        LocalTime localTime2 = localTime.plusSeconds(45);
-        System.out.println(&quot;当前时间45秒后是：&quot;+localTime2);
-
-        LocalTime localTime3 = localTime.plusMinutes(19);
-        System.out.println(&quot;当前时间19分钟后是：&quot;+localTime3);
-
-        LocalTime localTime4 = localTime.plusHours(3);
-        System.out.println(&quot;当前时间3小时后是：&quot;+localTime4);
-    &#125;
-&#125;
-
-//当前时间是：08:14:39.000000218
-//当前时间5纳秒后是：08:14:39.000000718
-//当前时间45秒后是：08:15:24.000000218
-//当前时间19分钟后是：08:33:39.000000218
-//当前时间3小时后是：11:14:39.000000218</code></pre>
-<h4 id="4-6-3-plus的单独使用方式1"><a href="#4-6-3-plus的单独使用方式1" class="headerlink" title="4.6.3. plus的单独使用方式1"></a>4.6.3. plus的单独使用方式1</h4><blockquote>
-<p>本文中都是使用plusXXX的方法进行演示，实际上也有对应的减少方法，以minus开头的方法对应的即为减少，实际上也有对应的减少方法，以minus开头的方法对应的即为减少，实际上minus方法调用的也是plus方法，只不过传入的参数是负数。</p>
-</blockquote>
-<p><strong>plus 和 minus 方法的应用</strong></p>
-<p>刚才学习到的plusXXX相关的方法都是添加了数值到具体的某一项上，根据观察还有两个单独的plus方法，接下来我们来学习这两个单独的plus方法。</p>
-<p><code>plus(long amountToadd, TemporalUnit unit) LocalTime</code></p>
-<p><code>plus(TemporalAmount amoutToadd)    LocalTime</code></p>
-<p>TemporalAmount 是一个接口，当接口作为方法的参数的时候，实际上传入的是接口的实现类对象，根据查看这个接口的体系，可以看到这个接口有一个实现类，名字叫做<code>Period</code>，这个类表示一段时间。</p>
-<p>如何使用Period来表示一段时间呢？这个类本身提供了<code>of(int year, int month, int day)</code>来表示，例如：<code>Period.of(1,2,3)</code>返回的对象即为1年2个月3天这么一个时间段。</p>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.Period;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:59
- */
-public class Java8TimeClassMethodPlusDemo3 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime now = LocalDateTime.now();
-        LocalDateTime endTime = now.plusYears(2).plusMonths(3).plusDays(8);
-        System.out.println(&quot;当前的时间是：&quot;+now+&quot;保险到期的时间是：&quot;+endTime);
-
-        Period period = Period.of(2, 3, 8);
-        LocalDateTime endTime1 = now.plus(period);
-        System.out.println(&quot;当前的时间是：&quot;+now+&quot;保险到期的时间是：&quot;+endTime1);
-    &#125;
-&#125;</code></pre>
-<h4 id="4-6-4-plus的单独使用方式2"><a href="#4-6-4-plus的单独使用方式2" class="headerlink" title="4.6.4. plus的单独使用方式2"></a>4.6.4. plus的单独使用方式2</h4><p><code>plus(long amountToadd, TemporalUnit unit)</code></p>
-<p>在实际开发过程中，可能还会更精准的去操作日期或者说增加一些特殊的时间，比如说1个世纪、1个半天，1千年，10年等，Java8提供了这些日期的表示方式而不需要去单独进行计算了。</p>
-<p>TemporalUnit是一个接口，通过查看体系接口发现,可以使用子类<code>ChronoUnit</code>来表示，ChronoUnit封装了很多<strong>时间段</strong>供我们使用(<strong>纳秒、微秒、毫秒、秒、分钟、小时、半天、天、周、月、年、十年、百年（世纪）、千年、亿年（纪元）、永久</strong>)。</p>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.temporal.ChronoUnit;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 18:06
- */
-public class Java8TimeClassMethodPlusDemo4 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime now = LocalDateTime.of(
-                2018, Month.JUNE, 24, 
-                18, 06, 56);
-        LocalDateTime marr = now.plus(1, ChronoUnit.DECADES);
-        System.out.println(&quot;如果在现在：&quot;+now+&quot;,name在&quot;+marr);
-        LocalDateTime fuc = marr.plus(1, ChronoUnit.HALF_DAYS);
-        System.out.println(&quot;然后时间是：&quot;+fuc);
-        LocalDateTime siw = fuc.withHour(23);
-        System.out.println(siw);
-    &#125;
-&#125;
-
-//如果在现在：2018-08-10T18:06:56,name在2028-06-24T18:06:56
-//然后的时间是：2028-06-25T06:06:56
-//2028-06-25T23:06:56</code></pre>
-<h3 id="4-7-with-方法"><a href="#4-7-with-方法" class="headerlink" title="4.7. with()方法"></a>4.7. with()方法</h3><h4 id="4-7-1-with方法在LocalDateTime类的应用"><a href="#4-7-1-with方法在LocalDateTime类的应用" class="headerlink" title="4.7.1. with方法在LocalDateTime类的应用"></a>4.7.1. with方法在LocalDateTime类的应用</h4><p>如果不需要对日期进行加减而是要直接修改日期的话，那么可以使用with方法，with方法提供了很多种修改时间的方式</p>
-<ul>
-<li>LocalDateTime withNano(int i) 修改纳秒</li>
-<li>LocalDateTime withSecond(int i) 修改秒</li>
-<li>LocalDateTime withMinute(int i) 修改分支</li>
-<li>LocalDateTime withHour(int i) 修改小时</li>
-<li>LocalDateTime withDayOfMonth(int i) 修改日</li>
-<li>LocalDateTime withMonth(int i) 修改月</li>
-<li>LocalDateTime withYear(int i) 修改年</li>
-</ul>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.Month;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 16:43
- */
-public class Java8TimeClassMethodWithDemo1 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime time = getTime();
-        LocalDateTime resultTime = time.withDayOfMonth(1);
-        System.out.println(&quot;修改前错误的时间是：&quot;+time+&quot;,正确的时间是：&quot;+resultTime);
-    &#125;
-    public static LocalDateTime getTime()&#123;
-        return LocalDateTime.of(1999, Month.DECEMBER,12,
-                12,12,0);
-    &#125;
-&#125;
-
-//修改前错误的时间是：1999-12-12T12:12,正确的时间是：1999-12-01T12:12</code></pre>
-<h4 id="4-7-2-with-TemporalField-field-long-newValue"><a href="#4-7-2-with-TemporalField-field-long-newValue" class="headerlink" title="4.7.2. with(TemporalField field, long newValue)"></a>4.7.2. with(TemporalField field, long newValue)</h4><p>temporalField是一个接口，通过查看体系结构，可以使用它的子类</p>
-<p>ChronoField,ChronoField中封装了一些<strong>日期时间中的组成成分</strong>，可以直接选择之后传入第二个参数进行修改。</p>
-<p>例如：with(ChronoField.DAY_OFMONTH,1);将日期中的月份中的天数改为1</p>
-<p>例如：with(ChronoField.YEAR,2021);将日期中的年份改为2021。</p>
-<blockquote>
-<p><code>java.time.temporal.ChronoField</code></p>
-</blockquote>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.temporal.ChronoField;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 16:51
- */
-public class Java8TimeClassMethodWithDemo2 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime time = getTime();
-        LocalDateTime resultTime = time.with(ChronoField.DAY_OF_MONTH, 1);
-        System.out.println(&quot;修改前错误的时间是：&quot;+time+&quot;,正确的时间是：&quot;+resultTime);
-    &#125;
-    public static LocalDateTime getTime()&#123;
-        return LocalDateTime.of(1999, Month.DECEMBER,12,
-                12,12,0);
-    &#125;
-&#125;
-
-//修改前错误的时间是：1999-12-12T12:12,正确的时间是：1999-12-01T12:12</code></pre>
-<h3 id="4-8-TemporalAdjuster"><a href="#4-8-TemporalAdjuster" class="headerlink" title="4.8. TemporalAdjuster"></a>4.8. TemporalAdjuster</h3><h4 id="4-8-1-TemporalAdjusters"><a href="#4-8-1-TemporalAdjusters" class="headerlink" title="4.8.1. TemporalAdjusters"></a>4.8.1. TemporalAdjusters</h4><p><strong>with(TemporalAdjuster adjuster)</strong></p>
-<p>在上一节学习的with方法中学习了可以通过with方法修改日期时间对象中封装的数据，但是有一些时候可能会做一些复杂的操作，比如说将时间调整到下个周的周日，下一个工作日，或者本月中的某一天，这个时候可以使用调节器TemporalAdjuster来更方便的处理日期。</p>
-<p>with方法有一个重载形式，需要传入一个<code>TemporalAdjuster</code>对象，通过查看发现TemporalAdjuster是一个接口，那么实际上传入的是这个接口的实现类对象。</p>
-<p>在以上的描述中，发现了一个叫做<code>TemporalAdjusters</code>的类可以给我们提供一些常用的方法，方法如下：</p>
-<p><strong>TemporalAdjusters类中常用静态方法的使用</strong></p>
-<ul>
-<li>static TemporalAdjuster firstDayofNextMonth()  下个月的第一天</li>
-<li>static TemporalAdjuster firstDayOfNextYear()  下一年的第一天</li>
-<li>static TemporalAdjuster firstDayOfYear()  当年的第一天</li>
-</ul>
-<pre><code class="java">import java.time.LocalDate;
-import java.time.temporal.TemporalAdjusters;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:03
- */
-public class Java8TimeTemporalAdjusterDemo1 &#123;
-    public static void main(String[] args) &#123;
-        LocalDate now = LocalDate.now();
-
-        LocalDate firstdayOfMonth = now.with(TemporalAdjusters.firstDayOfMonth());
-        System.out.println(&quot;当月的第一天：&quot;+firstdayOfMonth);
-
-        LocalDate firstDayOfNextMonth = now.with(TemporalAdjusters.firstDayOfNextMonth());
-        System.out.println(&quot;下一个月的第一天：&quot;+firstDayOfNextMonth);
-
-        LocalDate firstDayOfYear = now.with(TemporalAdjusters.firstDayOfYear());
-        System.out.println(&quot;本年的第一天：&quot;+firstDayOfYear);
-
-        LocalDate firstDayOfNextYear = now.with(TemporalAdjusters.firstDayOfNextYear());
-        System.out.println(&quot;下一年的第一天：&quot;+firstDayOfNextYear);
-
-        LocalDate lastDayOfMonth = now.with(TemporalAdjusters.lastDayOfMonth());
-        System.out.println(&quot;本月的最后一天：&quot;+lastDayOfMonth);
-
-        LocalDate lastDayOfYear = now.with(TemporalAdjusters.lastDayOfYear());
-        System.out.println(&quot;本年的最后一天：&quot;+lastDayOfYear);
-    &#125;
-&#125;
-
-//当月的第一天：2018-06-01
-//下一个月的第一天：2018-07-01
-//本年的第一天：2018-01-01
-//下一年的第一天：2021-01-01
-//本月的最后一天：2018-06-30
-//本年的最后一天：2018-12-31</code></pre>
-<blockquote>
-<p>TemporalAdjusters 是一个接口，with方法实际上传入的是这个接口的实现类对象，TemporalAdjusters并不是TemporalAdjuster的实现类，只不过TemporalAdjusters的静态方法实现了TemporalAdjuster，并且将实现类对象返回了。</p>
-</blockquote>
-<h4 id="4-8-2-DayOfWeek枚举类"><a href="#4-8-2-DayOfWeek枚举类" class="headerlink" title="4.8.2. DayOfWeek枚举类"></a>4.8.2. DayOfWeek枚举类</h4><p>DayOfWeek是一周中星期几的枚举类，其中封装了从周一到周日</p>
-<pre><code class="java">import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.temporal.TemporalAdjusters;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:11
- */
-public class Java8TimeTemporalAdjusterDemo2 &#123;
-    public static void main(String[] args) &#123;
-        LocalDate now = LocalDate.now();
-        LocalDate s = now.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
-        System.out.println(&quot;下一个周日是：&quot;+s);
-
-        LocalDate w = now.with(TemporalAdjusters.previous(DayOfWeek.WEDNESDAY));
-        System.out.println(&quot;上一个周三是：&quot;+w);
-    &#125;
-&#125;
-
-//下一个周日是：2018-06-28
-//上一个周三是：2018-08-10</code></pre>
-<h4 id="4-8-3-自定义TemporalAdjuster调节器"><a href="#4-8-3-自定义TemporalAdjuster调节器" class="headerlink" title="4.8.3. 自定义TemporalAdjuster调节器"></a>4.8.3. 自定义TemporalAdjuster调节器</h4><p>通过Java8本身提供的TemporalAdjusters中的方法可以完成一些常用的操作，如果要自定义日期时间的更改逻辑，可以通过实现TemporalAdjuster类接口的方式来完成。</p>
-<ol>
-<li>创建类实现TemporalAdjuster接口</li>
-<li>实现TemporalAdjuster中的 adjusterInto()方法，传入一个日期时间对象，完成逻辑之后返回日期事件对象。</li>
-<li>通过with方法传入自定义调节器对象完成更改。</li>
-</ol>
-<p><strong>例如：假如员工一个月中领取工资，发薪日是每个月的15日，如果发薪日是周末，则调整为周五。</strong></p>
-<pre><code class="java">import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalAdjusters;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 20:05
- */
-public class PayDayAdjuster implements TemporalAdjuster &#123;
-    @Override
-    public Temporal adjustInto(Temporal temporal) &#123;
-        LocalDate payDay = LocalDate.from(temporal);
-        int day;
-        if (payDay.getDayOfMonth()!=15)&#123;
-            day=15;
-        &#125;else &#123;
-            day = payDay.getDayOfMonth();
-        &#125;
-        LocalDate realPayDay = payDay.withDayOfMonth(day);
-        if (realPayDay.getDayOfWeek() == DayOfWeek.SUNDAY ||
-                realPayDay.getDayOfWeek() == DayOfWeek.SATURDAY)&#123;
-            realPayDay = realPayDay.with(TemporalAdjusters.previous(DayOfWeek.FRIDAY));
-        &#125;
-        return realPayDay;
-    &#125;
-&#125;</code></pre>
-<pre><code class="java">import java.time.LocalDate;
-import java.time.Month;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 20:14
- */
-public class Java8TimeTemporalAdjusterDemo3 &#123;
-    public static void main(String[] args) &#123;
-        LocalDate payDay = LocalDate.of(2018, Month.DECEMBER, 15);
-        LocalDate realPayDay = LocalDate.from(new PayDayAdjuster().adjustInto(payDay));
-        System.out.println(&quot;预计的发薪日是：&quot;+payDay);
-        System.out.println(&quot;实际的发薪日是：&quot;+realPayDay);
-    &#125;
-&#125;
-
-//预计的发薪日是：2018-12-15
-//实际的发薪日是：2018-12-14</code></pre>
-<h3 id="4-9-TemporalQuery"><a href="#4-9-TemporalQuery" class="headerlink" title="4.9. TemporalQuery"></a>4.9. TemporalQuery</h3><p>学习的时态类对象（LocalDate，LocalTime）都有一个方法叫做query，可以针对日期进行查询，<code>R  query(TemporalQuery query)</code>这个方法是一个泛型方法，返回的数据就是传入的泛型类的类型，TemporalQuery是一个泛型接口，里面有一个抽象方法是<code>R  queryFrom(TemporalAccessor temporal)</code>，**<em>TemporalAccessor**</em>是Temporal的父接口，实际上也就是LocalDate,LocalDateTime<strong>相关类的顶级父接口</strong>，这个queryFrom的方法的实现逻辑就是，传入一个日期/时间对象通过自定义逻辑返回数据。</p>
-<p>如果要计划日期距离某一天特定天数差距多少天，可以自定义类实现TemporalQuery接口并且作为参数传到query方法中。</p>
-<p><strong>例如：计算当前时间距离下一个国庆节还有多少天？</strong></p>
-<pre><code class="java">import java.time.LocalDate;
-import java.time.Month;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalQuery;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 20:21
- */
-public class UtilDayQueryImpl implements TemporalQuery&lt;Long&gt; &#123;
-    @Override
-    public Long queryFrom(TemporalAccessor temporal) &#123;
-        LocalDate now = LocalDate.from(temporal);
-        LocalDate lDay = LocalDate.of(now.getYear(), Month.OCTOBER, 1);
-        if (now.isAfter(lDay))&#123;
-            lDay = lDay.plusYears(1);
-        &#125;
-        long days = ChronoUnit.DAYS.between(now, lDay);
-        return days;
-    &#125;
-&#125;</code></pre>
-<pre><code class="java">import java.time.LocalDate;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 20:27
- */
-public class Java8TimeTemporalQueryDemo1 &#123;
-    public static void main(String[] args) &#123;
-        LocalDate now = LocalDate.now();
-        Long day = now.query(new UtilDayQueryImpl());
-        System.out.println(now);
-        System.out.println(day);
-    &#125;
-&#125;
-
-//2018-08-10
-//98</code></pre>
-<h3 id="4-10-转换"><a href="#4-10-转换" class="headerlink" title="4.10. 转换"></a>4.10. 转换</h3><h4 id="4-10-1-java-util-Date转换为java-time-LocalDate（1）"><a href="#4-10-1-java-util-Date转换为java-time-LocalDate（1）" class="headerlink" title="4.10.1. java.util.Date转换为java.time.LocalDate（1）"></a>4.10.1. java.util.Date转换为java.time.LocalDate（1）</h4><p>Java8中的java.time中并没有提供太多的内置方式来转换java.util包中用预处理标准日期和时间的类，我们可以<strong>使用Instant类作为中介，</strong>也可以<strong>使用java.sql.Date和java.sql.TimeStamp类提供的方法进行转换</strong>。</p>
-<p><strong>使用Instant类将java.util.Date转换为java.time.LocalDate</strong></p>
-<p>java.time包中并没有提供很多的方式来进行直接转换，但是给之前的Date类，Calendar类在java1.8都提供了一个新的方法，叫做toInstant()，可以将当前对象转换为Instant对象，通过给Instan添加时区信息之后就可以转换为LocalDate对象。</p>
-<pre><code class="java">import java.time.*;
-import java.util.Date;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 21:00
- */
-public class Java8DateToLocalDateDemo1 &#123;
-    public static void main(String[] args) &#123;
-        Date d = new Date();
-        Instant i = d.toInstant();
-        System.out.println(&quot;转换之前：&quot;+d);
-        ZonedDateTime zonedDateTime = i.atZone(ZoneId.systemDefault());
-        System.out.println(&quot;zoneDateTime:&quot;+zonedDateTime);
-        LocalDate date = zonedDateTime.toLocalDate();
-        System.out.println(&quot;转换之后：&quot;+date);
-        LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
-        System.out.println(&quot;转换之后localdatetime：&quot;+localDateTime);
-    &#125;
-&#125;
-
-//转换之前：Thu Jun 25 17:25:22 CST 2018
-//zoneDateTime:2018-08-10T17:25:22.746+08:00[Asia/Shanghai]
-//转换之后：2018-08-10
-//转换之后localdatetime：2018-08-10T17:25:22.746</code></pre>
-<h4 id="4-10-2-java-sql-Date与java-sql-Timestamp的转换方式"><a href="#4-10-2-java-sql-Date与java-sql-Timestamp的转换方式" class="headerlink" title="4.10.2. java.sql.Date与java.sql.Timestamp的转换方式"></a>4.10.2. java.sql.Date与java.sql.Timestamp的转换方式</h4><p>java.sql.Date类中提供直接转换为LocalDate的方法,<strong>toLocalDate()</strong></p>
-<p>java.sql.Timestamp类是时间戳对象，通过传入一个毫秒值对象进行初始化</p>
-<pre><code class="java">import java.sql.Date;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 21:06
- */
-public class Java8DateToLocalDemo2 &#123;
-    public static void main(String[] args) &#123;
-        Date d = new Date(System.currentTimeMillis());
-        System.out.println(&quot;转换之前的java.sql.Date对象是：&quot;+d);
-        LocalDate date = d.toLocalDate();
-        System.out.println(&quot;转换之后的java.time.LocalDate对象是：&quot;+date);
-
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println(&quot;转换之前的java.sql.Timestamp对象是：&quot;+timestamp);
-        LocalDateTime localDateTime = timestamp.toLocalDateTime();
-        System.out.println(&quot;转换之后的java.time.LocalDateTime对象是:&quot;+localDateTime);
-    &#125;
-&#125;
-
-//转换之前的java.sql.Date对象是：2018-08-10
-//转换之后的java.time.LocalDate对象是：2018-08-10
-//转换之前的java.sql.Timestamp对象是：2018-08-10 17:31:16.566
-//转换之后的java.time.LocalDateTime对象是:2018-08-10T17:31:16.566</code></pre>
-<h4 id="4-10-3-java-util-Date转换为java-time-LocalDate方式（2）"><a href="#4-10-3-java-util-Date转换为java-time-LocalDate方式（2）" class="headerlink" title="4.10.3. java.util.Date转换为java.time.LocalDate方式（2）"></a>4.10.3. java.util.Date转换为java.time.LocalDate方式（2）</h4><p>java.sql.Date类提供了转换为LocalDate的方法，那么可以将java.util.Date先转换为java.sql.Date。</p>
-<p>通过java.sql.Date的<strong>构造方法直接传入一个毫秒值</strong>可以构造一个java.sql.Date对象，毫秒值可以通过java.util.Date对象的getTime()方法获取到。</p>
-<pre><code class="java">import java.time.LocalDate;
-import java.util.Date;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 21:14
- */
-public class Java8DateToLocalDateDemo2 &#123;
-    public static void main(String[] args) &#123;
-        Date d = new Date();
-        System.out.println(&quot;转换之前的java.util.Date对象是：&quot;+d);
-        java.sql.Date date = new java.sql.Date(d.getTime());
-        System.out.println(&quot;转换之前的java.sql.Date对象是：&quot;+date);
-        LocalDate localDate = date.toLocalDate();
-        System.out.println(&quot;转换之前的java.time.LocalDate对象是：&quot;+localDate);
-    &#125;
-&#125;
-
-//转换之前的java.util.Date对象是：Thu Jun 25 17:27:04 CST 2018
-//转换之前的java.sql.Date对象是：2018-08-10
-//转换之前的java.time.LocalDate对象是：2018-08-10</code></pre>
-<h4 id="4-10-4-Calendar转换为ZonedDateTime"><a href="#4-10-4-Calendar转换为ZonedDateTime" class="headerlink" title="4.10.4. Calendar转换为ZonedDateTime"></a>4.10.4. Calendar转换为ZonedDateTime</h4><p>Calendar对象字Java1.1开始提供了一个方法获取时区对象的方法，<code>getTimeZone()</code>，要将Calendar对象转换为ZonedDateTime需要先获取到时区对象。从Java1.8开始<code>TimeZone</code>类提供了一个方法可以获取到ZonedId。获取到ZonedId之后就可以初始化ZonedDateTime对象了，ZonedDateTime类有一个<code>ofInstant()</code>方法，可以将一个Instant对象和ZonedId对象作为参数传入构造一个ZonedDateTime对象。</p>
-<pre><code class="java">import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.Calendar;
-import java.util.TimeZone;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 21:19
- */
-public class Java8TimeCalendarToZoneedDateTimeDemo1 &#123;
-    public static void main(String[] args) &#123;
-        Calendar calendar = Calendar.getInstance();
-        System.out.println(&quot;转换之前的Calendar对象是：&quot;+calendar);
-        TimeZone timeZone = calendar.getTimeZone();
-        ZoneId zoneId = timeZone.toZoneId();
-        ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(calendar.toInstant(), zoneId);
-        System.out.println(&quot;转换之后的ZoneDateTime对象是：&quot;+zonedDateTime);
-    &#125;
-&#125;
-
-//转换之前的Calendar对象是：java.util.GregorianCalendar[time=1593077767201,areFields......]
-//转换之后的ZoneDateTime对象是：2018-08-10T17:36:07.201+08:00[Asia/Shanghai]</code></pre>
-<h4 id="4-10-5-Calendar转换为LocalDateTime"><a href="#4-10-5-Calendar转换为LocalDateTime" class="headerlink" title="4.10.5. Calendar转换为LocalDateTime"></a>4.10.5. Calendar转换为LocalDateTime</h4><p>java.util.Calendar类转换为java.time.LocalDateTime类</p>
-<p>Calendar对象可以获取到年月日时分秒的信息，这些信息可以作为LocalDateTime构造方法的参数</p>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.util.Calendar;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 17:39
- */
-public class Java8TimeCalendarToLocalDateTimeDemo1 &#123;
-    public static void main(String[] args) &#123;
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-        int hour = calendar.get(Calendar.HOUR);
-        int minute = calendar.get(Calendar.MINUTE);
-        int second = calendar.get(Calendar.SECOND);
-        LocalDateTime localDateTime = LocalDateTime.of(year, month + 1, day, hour, minute, second);
-        System.out.println(localDateTime);
-    &#125;
-&#125;
-
-//2018-08-10T05:42:31</code></pre>
-<h3 id="4-11-格式化"><a href="#4-11-格式化" class="headerlink" title="4.11. 格式化"></a>4.11. 格式化</h3><h4 id="4-11-1-新日期时间类的parse和format方法"><a href="#4-11-1-新日期时间类的parse和format方法" class="headerlink" title="4.11.1. 新日期时间类的parse和format方法"></a>4.11.1. 新日期时间类的parse和format方法</h4><p>SimpleDateFormat类在刚开始的时候讲过了是线程不安全的，所以Java8提供了新的格式化类 <code>DateTimeFormatter</code></p>
-<p>dateTimeFormatter类提供了大量预定义格式化器，包括<strong>常量（如ISO_LOCAL_DATE），模式字母（如yyyy-MM-dd）</strong>以及本地化样式。</p>
-<p>与SimpleDateFormat不同的是，新版本的日期/时间API的格式化与解析不需要再创建转换器对象了，通过时间日期对象的parse/format方法可以直接进行转换.</p>
-<p><strong>LocalDate类定义的parse和format方法</strong></p>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 21:32
- */
-public class Java8TimeFormatAndParseDemo1 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println(&quot;LocalDateTime:&quot;+localDateTime);
-        String isoDate = localDateTime.format(DateTimeFormatter.ISO_DATE);
-        System.out.println(&quot;ISO_DATE:&quot;+isoDate);
-        String isoDateTime = localDateTime.format(DateTimeFormatter.ISO_DATE_TIME);
-        System.out.println(&quot;ISO_DATE_TIME:&quot;+isoDateTime);
-        LocalDateTime parse = LocalDateTime.parse(isoDateTime);
-        System.out.println(parse);
-
-    &#125;
-&#125;
-
-//LocalDateTime:2018-08-10T17:45:22.159
-//ISO_DATE:2018-08-10
-//ISO_DATE_TIME:2018-08-10T17:45:22.159
-//2018-08-10T17:45:22.159</code></pre>
-<h4 id="4-11-2-ofLocalizedDate-方法"><a href="#4-11-2-ofLocalizedDate-方法" class="headerlink" title="4.11.2. ofLocalizedDate()方法"></a>4.11.2. ofLocalizedDate()方法</h4><p>通过DateTimeFormatter的ofLocalizedDate的方法也可以调整格式化的方式。</p>
-<p>此方法需要传入一个<code>FormatStyle</code>类对象，FormaStyle对象是一个枚举类，其中有几种方式如下：</p>
-<p>**Full：全显示（年月日+星期） **</p>
-<p>**Long：全显示（年月日） **</p>
-<p>**Medium：缩略显示（没有年月日汉字） **</p>
-<p><strong>SHORT：精简显示（精简年+月日）</strong></p>
-<pre><code class="java">import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-
-/**
- * @author IceBerg
- * @create 2018-08-10 21:39
- */
-public class Java8TimeFormatAndParseDemo2 &#123;
-    public static void main(String[] args) &#123;
-        LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println(&quot;FULL:&quot;+&quot; &quot;+localDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
-        System.out.println(&quot;LONG:&quot;+&quot; &quot;+localDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)));
-        System.out.println(&quot;MEDIUM:&quot;+&quot; &quot;+localDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)));
-        System.out.println(&quot;SHORT:&quot;+&quot; &quot;+localDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)));
-    &#125;
-&#125;
-
-//FULL: 2018年6月25日 星期四
-//LONG: 2018年6月25日
-//MEDIUM: 2018-6-25
-//SHORT: 20-6-25</code></pre>
-<h4 id="4-11-3-自定义格式化器"><a href="#4-11-3-自定义格式化器" class="headerlink" title="4.11.3. 自定义格式化器"></a>4.11.3. 自定义格式化器</h4><p>除了系统自带的方式之外，也可以通过<code>DateTimeFormatter</code>类提供的<code>ofPattern</code>方式创建自定时格式化器，格式化的写法与之前使用SimpleDateFormat相同。</p>
-
-            
-        </article>
-    </div>
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>iceberg<br>
+    <strong>本文链接：</strong><a href="http://example.com/2020/09/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="http:&#x2F;&#x2F;example.com&#x2F;2020&#x2F;09&#x2F;25&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2020&#x2F;09&#x2F;25&#x2F;%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F&#x2F;</a><br>
     
-    <div class="nexmoe-post">
-        <a href="/2020/09/25/hello/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
-                    <img data-src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/wallpaper/风景建筑自然/1592929109562.jpg" data-sizes="auto" alt="hello" class="lazyload">
-                    <h1>hello</h1>
-                </div>
-            
-        </a>
-
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月25日</a>
-            <a><i class="nexmoefont icon-areachart"></i>1 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-        </div>
-
-        <article>
-            
-                <h1 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h1>
-            
-        </article>
-    </div>
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
     
+  </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
 </section>
-
+  </div>
+</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
@@ -7999,7 +6498,7 @@ public class Java8TimeFormatAndParseDemo2 &#123;
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1600998762855"></script>
+<script src="/js/app.js?v=1600998762830"></script>
   
 
 
