@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>快速上手 MinIO - IceBerg</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="/images/growd.png" type="image/png" />
+  <meta name="description" content="快速上手 MinIo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速上手 MinIO">
+<meta property="og:url" content="http://example.com/2020/09/30/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-MinIO/index.html">
+<meta property="og:site_name" content="IceBerg">
+<meta property="og:description" content="快速上手 MinIo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-30T06:32:51.000Z">
+<meta property="article:modified_time" content="2020-09-30T06:38:37.835Z">
+<meta property="article:author" content="iceberg">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="对象存储">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
+  
+  <link rel="stylesheet" href="/css/style.css?v=1601447938342">
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://gitee.com/bigpaozz/img_md/raw/master/hexo/wallpaper/风景建筑自然/7.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="iceberg" class="mdui-btn mdui-btn-icon"><img src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/growd.png" alt="iceberg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="iceberg">
+            <img src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/growd.png" alt="iceberg" alt="iceberg">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>5</div>
+        <div><span>标签</span>7</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://jq.qq.com/?_wv=1027&k=5CfKHun" target="_blank" mdui-tooltip="{content: 'QQ群'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Java/">Java</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Java/对象存储/">对象存储</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/设计模式/">设计模式</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 10px;">SpringCloud</a> <a href="/tags/SpringSecurity/" style="font-size: 10px;">SpringSecurity</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 10px;">对象存储</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 iceberg
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  <article class="nexmoe-py">
+    <p><strong>快速上手 MinIo</strong></p>
+<a id="more"></a>
+
+<h2 id="快速上手-MinIO"><a href="#快速上手-MinIO" class="headerlink" title="快速上手 MinIO"></a>快速上手 MinIO</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><code>docker-compose.yml</code></p>
+<pre><code class="yaml">version: &#39;3.3&#39;
+services: 
+    minio:
+        image: minio/minio
+        container_name: minio
+        restart: always
+        ports: 
+            - 9000:9000
+        command: server /data  # 指定容器中的目录 /data
+        environment: 
+            MINIO_ACCESS_KEY: iceberg
+            MINIO_SECRET_KEY: iceberg128
+        volumes: 
+            - ./data:/data
+            - ./config:/root/.minio/</code></pre>
+<h3 id="Java-API-使用"><a href="#Java-API-使用" class="headerlink" title="Java API 使用"></a>Java API 使用</h3><p><code>application.yml</code></p>
+<pre><code class="yaml">server:
+  port: 10003
+spring:
+  application:
+    name: iceberg-upload
+  servlet:
+    multipart:
+      max-file-size: 10MB #限制文件上传大小为10M
+minio:
+  endpoint: http://192.168.11.130:9000 #MinIO服务所在地址
+  bucketName: iceberg-image #存储桶名称
+  accessKey: iceberg #访问的key
+  secretKey: iceberg128 #访问的秘钥</code></pre>
+<p><code>MinioConfig.java</code></p>
+<pre><code class="java">@Data
+@Component
+public class MinioConfig &#123;
+    @Value(&quot;$&#123;minio.endpoint&#125;&quot;)
+    private String endpoint;
+    @Value(&quot;$&#123;minio.accessKey&#125;&quot;)
+    private String accessKey;
+    @Value(&quot;$&#123;minio.secretKey&#125;&quot;)
+    private String secretKey;
+
+    @Bean
+    public MinioClient minioClient() throws Exception &#123;
+        return MinioClient.builder()
+                .endpoint(endpoint)
+                .credentials(accessKey,secretKey)
+                .build();
+    &#125;
+&#125;</code></pre>
+<p><code>MinioUtil.java</code></p>
+<pre><code class="java">@Component
+public class MinioUtil &#123;
+    @Autowired
+    private MinioClient minioClient;
+
+    private static final int DEFAULT_EXPIRY_TIME=7*24*3600;
+
+    /**
+     * ======================= Bucket operations ===================================
+     * makeBucket   创建一个存储桶
+     * listBuckets  查询所有的存储桶
+     * bucketExists 检查存储桶是否存在
+     * removeBucket 删除一个存储桶
+     * listObjects  获取某个桶中所有的对象
+     * listIncompleteUploads   获取桶中被部分上传的对象
+     */
+    /**
+     * 判断桶是否存在
+     * @param bucketName
+     * @return
+     * @throws Exception
+     */
+    @SneakyThrows
+    public boolean bucketExists(String bucketName)&#123;
+        boolean isExists = minioClient.bucketExists(
+                BucketExistsArgs
+                        .builder()
+                        .bucket(bucketName)
+                        .build()
+        );
+        return isExists;
+    &#125;
+    /**
+     * 获取指定 bucket 的信息
+     * @param bucketName
+     * @return
+     */
+    @SneakyThrows
+    public Bucket getBucket(String bucketName) &#123;
+        return minioClient.listBuckets().stream().filter(b -&gt; b.name().equals(bucketName)).findFirst().get();
+    &#125;
+
+    /**
+     * ======================= Bucket Policy Operations ===================================
+     * getBucketPolicy  获得存储桶策略
+     * setBucketPolicy  设置存储桶策略
+     */
+
+
+    /**
+     * ======================= Object operations ===================================
+     * getObject   获得一个对象
+     * putObject   上传对象
+     * copyObject  copy对象，从对象到对象
+     * statObject  获取对象的元数据
+     * removeObject 删除对象
+     * removeIncompleteUpload  删除一个未完整上传的对象
+     */
+
+    /**
+     * 上传文件
+     * @param bucketName
+     * @param objectName
+     * @param file
+     */
+    @SneakyThrows
+    public void putObject(String bucketName, String objectName, MultipartFile file) &#123;
+        minioClient.putObject(PutObjectArgs.builder()
+                .bucket(bucketName)
+                .object(objectName)
+                .stream(file.getInputStream(),file.getSize(),-1)
+                .contentType(file.getContentType())
+                .build());
+    &#125;
+    /**
+     * 获取文件
+     * @param bucketName bucket名称
+     * @param objectName 文件名称
+     * @return 二进制流
+     */
+    @SneakyThrows
+    public InputStream getObject(String bucketName, String objectName) &#123;
+        return minioClient.getObject(GetObjectArgs.builder().bucket(bucketName).object(objectName).build());
+    &#125;
+    /**
+     * 删除文件
+     * @param bucketName bucket名称
+     * @param objectName 文件名称
+     */
+    @SneakyThrows
+    public void removeObject(String bucketName, String objectName) &#123;
+        minioClient.removeObject(RemoveObjectArgs.builder().bucket(bucketName).object(objectName).build());
+    &#125;
+
+    /**
+     * ======================= Presigned Operations ===================================
+     * getPresignedObjectUrl 生成预签名url
+     * presignedGetObject   生成一个给HTTP GET请求用的presigned URL
+     * presignedPutObject   生成一个给HTTP PUT请求用的presigned URL
+     * presignedPostPolicy  生成一个给HTTP POST请求用的presigned URL
+     */
+&#125;</code></pre>
+<p><code>UploadController.java</code></p>
+<pre><code class="java">@RestController
+public class UploadController &#123;
+
+    @Value(&quot;$&#123;minio.endpoint&#125;&quot;)
+    private String endpoint;
+    @Value(&quot;$&#123;minio.bucketName&#125;&quot;)
+    private String bucketName;
+
+    @Autowired
+    private MinioUtil minioUtil;
+
+    //上传文件到minio服务
+    @PostMapping(&quot;/upload&quot;)
+    public ResponseEntity&lt;String&gt; upload(@RequestParam(&quot;file&quot;) MultipartFile file )  &#123;
+        try &#123;
+            String name = file.getOriginalFilename();
+            minioUtil.putObject(bucketName,name,file);
+            String url = endpoint+&quot;/&quot;+bucketName+&quot;/&quot;+name;
+            return ResponseEntity.ok(url);
+        &#125;catch (Exception e)&#123;
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        &#125;
+    &#125;
+&#125;</code></pre>
+<p><strong>API都很简单，详细的查看官方文档：<a target="_blank" rel="noopener" href="https://docs.min.io/docs/java-client-quickstart-guide.html">https://docs.min.io/docs/java-client-quickstart-guide.html</a></strong></p>
+<h3 id="补充：getPresignedObjectUrl"><a href="#补充：getPresignedObjectUrl" class="headerlink" title="补充：getPresignedObjectUrl"></a>补充：getPresignedObjectUrl</h3><p><code>PresignedURL</code> 预签名URL</p>
+<p>如果你想把自己的资源发放给第三方用户访问，但是又不想开放Bucket的读权限，可以通过生成预签名URL的形式提供给用户一个临时的访问URL。在生成URL时，你可以指定URL过期的时间，从而限制用户长时间访问。 </p>
+<p><code>MinioTest.java</code></p>
+<pre><code class="java">@SpringBootTest
+public class MinioTest &#123;
+    @Test
+    public void getBucket() throws Exception &#123;
+        MinioClient client = MinioClient.builder()
+                .endpoint(&quot;http://192.168.11.130:9000&quot;)
+                .credentials(&quot;iceberg&quot;, &quot;iceberg128&quot;)
+                .build();
+
+        String url = client.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder()
+                .bucket(&quot;iceberg-image&quot;)
+                .object(&quot;9.jpg&quot;)
+                .expiry(20,TimeUnit.SECONDS)
+                .method(Method.GET)
+                .build()
+        );
+        System.out.println(url);
+    &#125;
+&#125;</code></pre>
+<p>获得 <code>iceberg-image</code> <code>bucket</code> 中 <code>9.jpg</code> 的<code>PresignedURL</code>，并且设置超时时间为<code>20秒</code>，并且只能以 <code>GET</code> 方式操作。</p>
+<pre><code class="http">http://192.168.11.130:9000/iceberg-image/9.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=iceberg%2F20200930%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20200930T061343Z&amp;X-Amz-Expires=20&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=807d40a6e6cf72bee8e336a7639d9b7ac2ddd4f589d2709c33a18833e76a637e</code></pre>
+<p>访问这个URL，20秒后刷新：</p>
+<pre><code class="xml">This XML file does not appear to have any style information associated with it. The document tree is shown below.
+&lt;Error&gt;
+&lt;Code&gt;AccessDenied&lt;/Code&gt;
+&lt;Message&gt;Request has expired&lt;/Message&gt;
+&lt;Key&gt;9.jpg&lt;/Key&gt;
+&lt;BucketName&gt;iceberg-image&lt;/BucketName&gt;
+&lt;Resource&gt;/iceberg-image/9.jpg&lt;/Resource&gt;
+&lt;RequestId&gt;16397B0E455C8F87&lt;/RequestId&gt;
+&lt;HostId&gt;5d2bbb22-7d33-4652-a1ec-e90db490c2e8&lt;/HostId&gt;
+&lt;/Error&gt;</code></pre>
+<p>提示信息：<code>accessdenied</code>，拒绝。</p>
+<h3 id="一个小坑"><a href="#一个小坑" class="headerlink" title="一个小坑"></a>一个小坑</h3><p>由于使用<code>虚拟机</code>安装的<code>MinIO</code>服务，莫名地原因导致虚拟机的时间和Windows主机的时间不一致，在使用 <code>java client</code> 连接测试时，一直连接不上，折腾了好大一会儿，最后发现是时间的问题，校对时间后正常测试。</p>
+<p>如果使用云服务器的话，是不会有这种问题的，使用<code>虚拟机</code>的伙计这里注意一下。</p>
+
+  </article>
+  <section class="nexmoe-comment">
+    <div id="lv-container" data-id="city" data-uid="&lt;data_uid&gt;">
+    <script id="livere-comment-js">
+    (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+    </script>
+</div>
+</section>
+</div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+<script src="/js/app.js?v=1601447938350"></script>
+  
+
+
+
+
+
+</body>
+
+</html>
