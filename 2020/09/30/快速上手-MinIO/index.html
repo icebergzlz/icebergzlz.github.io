@@ -20,14 +20,14 @@
 <meta property="og:description" content="快速上手 MinIo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-30T06:32:51.000Z">
-<meta property="article:modified_time" content="2020-09-30T06:38:37.835Z">
+<meta property="article:modified_time" content="2020-09-30T06:44:21.867Z">
 <meta property="article:author" content="iceberg">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="对象存储">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601447938342">
+  <link rel="stylesheet" href="/css/style.css?v=1601448324060">
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -201,7 +201,13 @@ services:
         volumes: 
             - ./data:/data
             - ./config:/root/.minio/</code></pre>
-<h3 id="Java-API-使用"><a href="#Java-API-使用" class="headerlink" title="Java API 使用"></a>Java API 使用</h3><p><code>application.yml</code></p>
+<h3 id="Java-API-使用"><a href="#Java-API-使用" class="headerlink" title="Java API 使用"></a>Java API 使用</h3><p><code>pom.xml</code></p>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.minio&lt;/groupId&gt;
+    &lt;artifactId&gt;minio&lt;/artifactId&gt;
+    &lt;version&gt;7.1.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p><code>application.yml</code></p>
 <pre><code class="yaml">server:
   port: 10003
 spring:
@@ -428,7 +434,7 @@ public class MinioTest &#123;
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601447938350"></script>
+<script src="/js/app.js?v=1601448324068"></script>
   
 
 
