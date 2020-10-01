@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>对象存储服务 - IceBerg</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="/images/growd.png" type="image/png" />
+  <meta name="description" content="对象存储服务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对象存储服务">
+<meta property="og:url" content="http://example.com/2020/10/01/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/index.html">
+<meta property="og:site_name" content="IceBerg">
+<meta property="og:description" content="对象存储服务">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-01T10:00:05.000Z">
+<meta property="article:modified_time" content="2020-10-01T10:16:24.822Z">
+<meta property="article:author" content="iceberg">
+<meta property="article:tag" content="互联网&amp;计算机">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
+  
+  <link rel="stylesheet" href="/css/style.css?v=1601547778430">
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://gitee.com/bigpaozz/img_md/raw/master/hexo/wallpaper/风景建筑自然/7.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="iceberg" class="mdui-btn mdui-btn-icon"><img src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/growd.png" alt="iceberg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="iceberg">
+            <img src="https://gitee.com/bigpaozz/img_md/raw/master/hexo/growd.png" alt="iceberg" alt="iceberg">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>8</div>
+        <div><span>分类</span>4</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://jq.qq.com/?_wv=1027&k=5CfKHun" target="_blank" mdui-tooltip="{content: 'QQ群'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Java/">Java</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/互联网-计算机/">互联网&amp;计算机</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Java/对象存储/">对象存储</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/设计模式/">设计模式</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 10px;">SpringCloud</a> <a href="/tags/SpringSecurity/" style="font-size: 10px;">SpringSecurity</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91-%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 10px;">互联网&计算机</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 10px;">对象存储</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 iceberg
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  <article class="nexmoe-py">
+    <p><strong>对象存储服务</strong></p>
+<a id="more"></a>
+
+<h3 id="对象存储服务"><a href="#对象存储服务" class="headerlink" title="对象存储服务"></a>对象存储服务</h3><p>了解对象存储服务之前，先了解一下存储方式有哪些</p>
+<h4 id="1-块存储"><a href="#1-块存储" class="headerlink" title="1. 块存储 "></a><code>1. 块存储 </code></h4><ul>
+<li>DAS（Direct Attach STorage）：  是直接连接于主机服务器的一种储存方式，每一台主机服务器有独立的储存设备，每台主机服务器的储存设备无法互通。</li>
+<li>SAN（Storage Area Network）：  是一种用高速（光纤）网络联接专业主机服务器的一种储存方式，此系统会位于主机群的后端，它使用高速I/O 联结方式， 如 SCSI, ESCON及 Fibre- Channels。一般而言，SAN应用在对网络速度要求高、对数据的可靠性和安全性要求高、对数据<strong>共享</strong>的性能要求高的应用环境中，特点是代价高，性能好。 </li>
+</ul>
+<p>块存储可以通过<code>Raid</code>与<code>LVM</code>等手段，对数据提供保护，可以将多块硬盘组合起来形成<code>逻辑盘</code>，当写入数据的时候，由于是多块硬盘可以实现并行写入，提升了写入速率。</p>
+<p>但是使用块存储的单个主机之间无法实现数据共享，需要通过集群&amp;复杂的配置才可以，并且不同的文件系统（如win的NTFS、Linux的EXT4等等）之间无法数据共享，还有就是SAN架构的实现成本比较高。</p>
+<h4 id="2-文件存储"><a href="#2-文件存储" class="headerlink" title="2. 文件存储"></a><code>2. 文件存储</code></h4><p>常见的文件存储有NAS（Network Attached Storage）， 是一套网络储存设备，通常是直接连在网络上并提供资料存取服务，一套 NAS 储存设备就如同一个提供数据文件服务的系统。 它采用NFS或CIFS命令集访问数据，以文件为传输协议，通过TCP/IP实现网络化存储，可扩展性好、价格便宜、用户易管理，如目前在集群计算中应用较多的NFS文件系统，但由于NAS的协议开销高、带宽低、延迟大，不利于在高性能集群中应用。 </p>
+<p>使用文件存储的系统成本低，操作简单，方便文件共享。但是速度相对于<code>块存储</code>就慢了许多，因为通过以太网，并且读写都要1台服务器里面的硬盘来承担。</p>
+<hr>
+<p>简单来说块存储读写快，不利于共享，文件存储读写慢，利于共享。</p>
+<p>那能否弄一个读写快，利 于共享的出来呢。于是就有了对象存储。 </p>
+<h4 id="3-对象存储"><a href="#3-对象存储" class="headerlink" title="3. 对象存储"></a><code>3. 对象存储</code></h4><p>对象存储是将数据通路（数据读或写）和控制通路（元数据）分离，并且基于对象存储设备（Object-based Storage Device，OSD）构建存储系统，每个对象存储设备具有一定的智能，能够自动管理其上的数据分布。 </p>
+<p>对象存储结构组成部分 ：</p>
+<ul>
+<li><p><code>对象</code> ：是系统中数据存储的基本单位，一个对象实际上就是<code> 内容（文件的数据）</code>和一组<code> 元数据（属性信息）</code>（Meta Data）的组合，这些属性信息可以定义基于文件的RAID参数、数据分布和服务质量等，而传统的存储系统中用文件或块作为基本的存储单位，在块存储系统中还需要始终追踪系统中每个块的属性，对象通过与存储系统通信维护自己的属性。在存储设备中，所有对象都有一个对象标识，通过对象标识OSD命令访问该对象。</p>
+<p>通常有多种类型的对象，存储设备上的<code>根对象</code>标识存储设备和该设备的各种属性，<code>组对象</code>是存储设备上共享资源管理策略的对象集合等。 </p>
+</li>
+<li><p><code>对象存储设备</code>：具有一定的智能，它有自己的CPU、内存、网络和磁盘系统，OSD同块设备的不同不在于存储介质，而在于两者提供的访问接口。OSD的主要功能包括数据存储和安全访问。目前国际上通常采用刀片式结构实现对象存储设备。OSD提供三个主要功能： </p>
+<ul>
+<li>数据存储。OSD管理对象数据，并将它们放置在标准的磁盘系统上，OSD不提供块接口访问方式，Client请求数据时用对象ID、偏移进行数据读写。 </li>
+<li>智能分布。OSD用其自身的CPU和内存优化数据分布，并支持数据的预取。由于OSD可以智能地支持对象的预取，从而可以优化磁盘的性能。 </li>
+<li>每个对象元数据的管理。 OSD管理存储在其上对象的元数据，该元数据与传统的inode元数据相似，通常包括对象的数据块和对象的长度。而在传统的NAS系统中，这些元数据是由文件服务器维护的，对象存储架构将系统中主要的元数据管理工作由OSD来完成，降低了Client的开销。 </li>
+</ul>
+</li>
+<li><p><code>元数据服务器</code>（Metadata Server，MDS）  MDS控制Client与OSD对象的交互，主要提供以下几个功能： </p>
+<ul>
+<li><code>对象存储访问</code>：MDS构造、管理描述每个文件分布的视图，允许Client直接访问对象。MDS为Client提供访问该文件所含对象的能力，OSD在接收到每个请求时将先验证该能力，然后才可以访问。 </li>
+<li><code>文件和目录访问管理</code> ：MDS在存储系统上构建一个文件结构，包括限额控制、目录和文件的创建和删除、访问控制等。 </li>
+<li><code>Client Cache一致性</code>：为了提高Client性能，在对象存储系统设计时通常支持Client方的Cache。由于引入Client方的Cache，带来了Cache一致性问题，MDS支持基于Client的文件Cache，当Cache的文件发生改变时，将通知Client刷新Cache，从而防止Cache不一致引发的问题。 </li>
+</ul>
+</li>
+<li><p><code>对象存储系统的客户端Client</code> ：为了有效支持Client支持访问OSD上的对象，需要在计算节点实现对象存储系统的Client，通常提供POSIX文件系统接口，允许应用程序像执行标准的文件系统操作一样。 </p>
+</li>
+</ul>
+<blockquote>
+<p>综上</p>
+</blockquote>
+<p>以往的文件系统，存储过程将文件按文件系统的最小块来打散，再写进硬盘，过程中没有区分元数据(metadata)和数据。而在每个块最后才会告知下一个块的地址，因此只能一个一个读，速度慢。</p>
+<p>而对象存储则将元数据独立出来，控制节点叫元数据服务器(服务器+对象存储管理软件)，里面主要存储对象的属性(主要是对象的数据被打散存放到了那几台分布式服务器中的信息)，而其他负责存储数据的分布式服务器叫做OSD，主要负责存储文件的数据部分。当用户访问对象时，会先访问元数据服务器，元数据服务器只负责反馈对象存储在那些OSD。假设反馈文件A存储在B,C,D三台OSD，那么用户就会再次访问三台OSD服务器去读取数据。</p>
+<p>这时三台OSD同时对外传输数据，因此传输的速度就加快了。OSD服务器数量越多，这种读写速度的提升就越大。</p>
+<p>另一方面，对象存储软件有专门的文件系统，所以OSD对外又相当于文件服务器，那么就不存在文件共享方面的困难了，也解决了文件共享方面的问题。</p>
+<p>因此对象存储的出现，很好的结合了块存储与文件存储的优点。</p>
+<h4 id="对象存储的特点"><a href="#对象存储的特点" class="headerlink" title="对象存储的特点"></a>对象存储的特点</h4><p>对象存储有两个显著的特征——REST风格的接口和扁平的数据组织结构， 通过HTTP请求中的PUT和GET等操作进行文件的上传即写入和下载即读取，通过DELETE操作删除文件。 </p>
+<p>所谓“扁平数据组织结构”，因为它和文件夹可以一级一级嵌套不同，层次关系是固定的，而且只有两到三级，是扁平的。每个用户可以把它的存储空间划分为“容器”（Bucket），然后往每个容器里放对象，对象不能直接放到租户的根存储空间里，必须放到某个容器下面，而不能嵌套，也就是说，容器下面不能再放一层容器，只能放对象。每一级的每个元素，例如S3中的某个容器或者某个对象，在系统中都有唯一的标识，用户通过这个标识来访问容器或者对象，所以，对象存储提供的是一种K/V的访问方式。 </p>
+<hr>
+<p>阿里的对象存储服务叫做OSS，腾讯称其为COS，而华为取名为OBS；</p>
+<p> 对象存储也有一些著名的开源实现，如OpenStack Swift、开源的统一存储系统Ceph、<code>MinIO</code> 是一个基于 <code>Apache License v2.0</code> 开源协议的对象存储服务。 </p>
+
+  </article>
+  <section class="nexmoe-comment">
+    <div id="lv-container" data-id="city" data-uid="&lt;data_uid&gt;">
+    <script id="livere-comment-js">
+    (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+    </script>
+</div>
+</section>
+</div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+<script src="/js/app.js?v=1601547778435"></script>
+  
+
+
+
+
+
+</body>
+
+</html>
